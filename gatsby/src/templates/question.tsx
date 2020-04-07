@@ -1,11 +1,10 @@
 import * as React from "react"
 import { graphql } from "gatsby"
-import { Card, Button, Typography } from "@material-ui/core"
-import { LocalDate, ChronoUnit, DateTimeFormatter } from "@js-joda/core"
+import { Button, Typography } from "@material-ui/core"
+import { LocalDate, ChronoUnit } from "@js-joda/core"
 
 import QuestionIntro from "../components/shared/QuestionIntro.component"
 import QuestionCard from "../components/shared/QuestionCard.component"
-import THEME from "../theme"
 import config from "../config"
 
 const { startDayStorageKey } = config
