@@ -1,6 +1,6 @@
 import * as React from "react"
 import { graphql } from "gatsby"
-import { Card, Button } from "@material-ui/core"
+import { Card, Button, Typography } from "@material-ui/core"
 import { LocalDate, ChronoUnit, DateTimeFormatter } from "@js-joda/core"
 import { Locale } from "@js-joda/locale_en"
 
@@ -57,17 +57,9 @@ export default ({ data }: IQuestion) => {
   return (
     <div style={{ maxWidth: 600, margin: "0 auto", padding: "20px 0" }}>
       <Card style={{ padding: 50 }}>
-        <h1
-          style={{
-            marginBottom: 30,
-            marginTop: 0,
-            marginLeft: 70,
-            marginRight: 70,
-            textAlign: "center",
-          }}
-        >
+        <Typography variant="h2" component="h1" style={{ textAlign: "center" }}>
           {questions[dayIndex]}
-        </h1>
+        </Typography>
         <p style={{ textAlign: "center", margin: "50px 0 0" }}>
           {getDateFromDayIndex(dayIndex)}
         </p>
