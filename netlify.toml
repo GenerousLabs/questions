@@ -1,2 +1,4 @@
 [build]
   base = "gatsby"
+  command = "gatsby build"
+  ignore = "git diff --quiet HEAD^ HEAD -- . ../questions"
