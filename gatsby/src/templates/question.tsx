@@ -2,11 +2,12 @@ import * as React from "react"
 import { graphql } from "gatsby"
 import Card from "@material-ui/core/Card"
 import Responsive from "react-responsive"
+import { LocalDate, ChronoUnit } from "@js-joda/core"
 
 import THEME from "../theme"
+import config from "../config"
 
-const Mobile = props => <Responsive {...props} maxWidth={767} />
-const Default = props => <Responsive {...props} minWidth={768} />
+const { startDayStorageKey } = config
 
 interface IContentAreaProps {
   children: React.ReactNode
@@ -29,9 +30,13 @@ interface IQuestion {
 
 const getDefaultDayIndex = (): number => {
   if (window && window.localStorage) {
-    const maybe = window.localStorage.getItem("__dayIndex")
+    const maybe = window.localStorage.getItem(startDayStorageKey)
     if (typeof maybe === "string") {
-      return parseInt(maybe)
+      try {
+        const start = LocalDate.parse(maybe)
+        const today = LocalDate.now()
+        return start.until(today, ChronoUnit.DAYS)
+      } catch (e) {}
     }
   }
   return 0
