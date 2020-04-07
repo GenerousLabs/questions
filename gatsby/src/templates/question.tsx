@@ -44,6 +44,7 @@ const getDefaultDayIndex = (): number => {
 
 export default ({ data }: IQuestion) => {
   const { questions } = data.questionsYaml
+  const numberOfQuestions = questions.length
 
   const [dayIndex, setDayIndex] = React.useState(getDefaultDayIndex())
 
@@ -61,6 +62,26 @@ export default ({ data }: IQuestion) => {
         >
           {questions[dayIndex]}
         </h1>
+        {dayIndex > 0 ? (
+          <Button
+            variant="contained"
+            onClick={() => {
+              setDayIndex(dayIndex - 1)
+            }}
+          >
+            Yesterday
+          </Button>
+        ) : null}
+        {dayIndex < numberOfQuestions - 1 ? (
+          <Button
+            variant="contained"
+            onClick={() => {
+              setDayIndex(dayIndex + 1)
+            }}
+          >
+            Tomorrow
+          </Button>
+        ) : null}
       </Card>
       <h1>All Questions</h1>
       <ul>
