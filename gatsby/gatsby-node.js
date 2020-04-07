@@ -32,7 +32,7 @@ exports.createPages = ({ graphql, actions }) => {
     result.data.allQuestionsYaml.nodes.forEach(node => {
       const { slug } = node
       createPage({
-        path: slug,
+        path: `/${slug}/`,
         component: questionTemplate,
         context: {
           slug,
