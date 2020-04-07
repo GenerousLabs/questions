@@ -1,5 +1,7 @@
 import * as React from "react"
-import { Typography, Button, Card } from "@material-ui/core"
+import { Typography, Button } from "@material-ui/core"
+
+import Card from "./Card.component"
 
 interface Props {
   numberOfQuestions: number
@@ -10,7 +12,7 @@ const QuestionIntro = (props: Props) => {
   const { numberOfQuestions, start } = props
 
   return (
-    <Card style={{ padding: 50 }}>
+    <Card>
       <Typography variant="h2">
         {numberOfQuestions} day question challenge
       </Typography>

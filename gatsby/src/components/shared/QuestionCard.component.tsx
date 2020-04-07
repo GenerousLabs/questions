@@ -1,7 +1,9 @@
 import * as React from "react"
-import { Card, Typography } from "@material-ui/core"
+import { Typography } from "@material-ui/core"
 import { LocalDate, DateTimeFormatter } from "@js-joda/core"
 import { Locale } from "@js-joda/locale_en"
+
+import Card from "./Card.component"
 
 interface Props {
   name: string
@@ -19,10 +21,10 @@ const QuestionCard = (props: Props) => {
   const { name, questions, dayIndex } = props
   return (
     <>
-      <Card style={{ padding: 50 }}>
-        <Typography variant="h1" component="h2">
-          {name}
-        </Typography>
+      <Typography variant="h1" component="h2">
+        {name}
+      </Typography>
+      <Card>
         {dayIndex > 0 ? (
           <Typography>{questions[dayIndex - 1]}</Typography>
         ) : null}
