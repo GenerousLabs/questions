@@ -9,16 +9,6 @@ import config from "../config"
 
 const { startDayStorageKey } = config
 
-interface IContentAreaProps {
-  children: React.ReactNode
-  title: string
-}
-
-interface IBlogPostLayout {
-  children: React.ReactNode
-  title: string
-}
-
 interface IQuestion {
   data: {
     questionsYaml: {
