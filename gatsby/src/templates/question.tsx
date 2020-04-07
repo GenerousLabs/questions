@@ -48,6 +48,58 @@ const getDateFromDayIndex = (index: number): string => {
     .format(DateTimeFormatter.ofPattern("d MMMM YYYY").withLocale(Locale.US))
 }
 
+const saveToday = () => {
+  window.localStorage.setItem(startDayStorageKey, LocalDate.now().toString())
+  alert("Today has been saved in your browser #Bm1MbR")
+}
+
+const QuestionCard = (props: { questions: string[]; dayIndex: number }) => {
+  const { questions, dayIndex } = props
+  return (
+    <Card style={{ padding: 50 }}>
+      <Typography variant="h2" component="h1" style={{ textAlign: "center" }}>
+        {questions[dayIndex]}
+      </Typography>
+
+      <Typography style={{ textAlign: "center", margin: "50px 0 0" }}>
+        {getDateFromDayIndex(dayIndex)}
+      </Typography>
+    </Card>
+  )
+}
+
+const DayButtons = (props: {
+  dayIndex: number
+  setDayIndex: (dayIndex: number) => void
+  numberOfQuestions: number
+}) => {
+  const { dayIndex, setDayIndex, numberOfQuestions } = props
+  return (
+    <p>
+      {dayIndex > 0 ? (
+        <Button
+          variant="outlined"
+          onClick={() => {
+            setDayIndex(dayIndex - 1)
+          }}
+        >
+          Yesterday
+        </Button>
+      ) : null}
+      {dayIndex < numberOfQuestions - 1 ? (
+        <Button
+          variant="outlined"
+          onClick={() => {
+            setDayIndex(dayIndex + 1)
+          }}
+        >
+          Tomorrow
+        </Button>
+      ) : null}
+    </p>
+  )
+}
+
 export default ({ data }: IQuestion) => {
   const { questions } = data.questionsYaml
   const numberOfQuestions = questions.length
@@ -56,51 +108,23 @@ export default ({ data }: IQuestion) => {
 
   return (
     <div style={{ maxWidth: 600, margin: "0 auto", padding: "20px 0" }}>
-      <Card style={{ padding: 50 }}>
-        <Typography variant="h2" component="h1" style={{ textAlign: "center" }}>
-          {questions[dayIndex]}
-        </Typography>
-        <Typography style={{ textAlign: "center", margin: "50px 0 0" }}>
-          {getDateFromDayIndex(dayIndex)}
-        </Typography>
-      </Card>
-      <p>
-        {dayIndex > 0 ? (
-          <Button
-            variant="contained"
-            onClick={() => {
-              setDayIndex(dayIndex - 1)
-            }}
-          >
-            Yesterday
-          </Button>
-        ) : null}
-        {dayIndex < numberOfQuestions - 1 ? (
-          <Button
-            variant="contained"
-            onClick={() => {
-              setDayIndex(dayIndex + 1)
-            }}
-          >
-            Tomorrow
-          </Button>
-        ) : null}
-      </p>
-      <h1>All Questions</h1>
-      <ul>
+      <QuestionCard questions={questions} dayIndex={dayIndex} />
+      <DayButtons
+        dayIndex={dayIndex}
+        setDayIndex={setDayIndex}
+        numberOfQuestions={numberOfQuestions}
+      />
+      <Typography variant="h2">All Questions</Typography>
+      <ol>
         {questions.map((question, i) => (
           <li key={i}>{question}</li>
         ))}
-      </ul>
-      <h1>Start</h1>
+      </ol>
+      <Typography variant="h2">Start</Typography>
       <Button
-        variant="contained"
+        variant="outlined"
         onClick={() => {
-          window.localStorage.setItem(
-            startDayStorageKey,
-            LocalDate.now().toString()
-          )
-          alert("Today has been saved in your browser #Bm1MbR")
+          saveToday()
         }}
       >
         Start today
