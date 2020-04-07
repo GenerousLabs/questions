@@ -1,6 +1,6 @@
 import * as React from "react"
 import { graphql } from "gatsby"
-import Card from "@material-ui/core/Card"
+import { Card, Button } from "@material-ui/core"
 import Responsive from "react-responsive"
 import { LocalDate, ChronoUnit } from "@js-joda/core"
 
@@ -68,6 +68,19 @@ export default ({ data }: IQuestion) => {
           <li key={i}>{question}</li>
         ))}
       </ul>
+      <h1>Start</h1>
+      <Button
+        variant="contained"
+        onClick={() => {
+          window.localStorage.setItem(
+            startDayStorageKey,
+            LocalDate.now().toString()
+          )
+          alert("Today has been saved in your browser #Bm1MbR")
+        }}
+      >
+        Start today
+      </Button>
     </div>
   )
 }
