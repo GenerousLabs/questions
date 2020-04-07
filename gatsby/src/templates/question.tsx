@@ -3,7 +3,6 @@ import { graphql } from "gatsby"
 import Card from "@material-ui/core/Card"
 import Responsive from "react-responsive"
 
-import Layout from "../components/layouts/question.layout"
 import THEME from "../theme"
 
 const Mobile = props => <Responsive {...props} maxWidth={767} />
