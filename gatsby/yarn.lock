@@ -1269,6 +1269,11 @@
   resolved "https://registry.yarnpkg.com/@js-joda/core/-/core-2.0.0.tgz#e9a351ee6feb91262770e2a3d085aa0219ad6afb"
   integrity sha512-OWm/xa9O9e4ugzNHoRT3IsXZZYfaV6Ia1aRwctOmCQ2GYWMnhKBzMC1WomqCh/oGxEZKNtPy5xv5//VIAOgMqw==
 
+"@js-joda/locale_en@^3.1.1":
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/@js-joda/locale_en/-/locale_en-3.1.1.tgz#4c1b27c146d97e60bbc6d91f26b3d6588308b61d"
+  integrity sha512-1hfsAIbTKXYDSgdOHk6eUusytRjMmOnSrlywHZzzIOULm7b7WnZ526m7kp9M50Hmm7bYHI9ylew1cIiqUpSqQw==
+
 "@material-ui/core@^3.9.2":
   version "3.9.4"
   resolved "https://registry.yarnpkg.com/@material-ui/core/-/core-3.9.4.tgz#5297fd4ad9e739a87da4a6d34fc4af5396886e13"
