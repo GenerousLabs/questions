@@ -98,6 +98,9 @@ export default ({ data }: IQuestion) => {
 
   return (
     <Container>
+      <Typography variant="h6" component="h2">
+        Today's question
+      </Typography>
       <QuestionCard name={name} questions={questions} dayIndex={dayIndex} />
       <DayButtons
         dayIndex={dayIndex}

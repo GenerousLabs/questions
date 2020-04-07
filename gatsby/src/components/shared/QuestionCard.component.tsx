@@ -19,12 +19,14 @@ const QuestionCard = (props: Props) => {
   const { name, questions, dayIndex } = props
   return (
     <>
-      <Typography variant="h6" component="h2">
-        Today's question
-      </Typography>
       <Card style={{ padding: 50 }}>
-        <Typography variant="body1">{name}</Typography>
-        <Typography variant="h2" component="h1" style={{ textAlign: "center" }}>
+        <Typography variant="h1" component="h2">
+          {name}
+        </Typography>
+        {dayIndex > 0 ? (
+          <Typography>{questions[dayIndex - 1]}</Typography>
+        ) : null}
+        <Typography variant="h2" component="h2" style={{ textAlign: "center" }}>
           {questions[dayIndex]}
         </Typography>
 
