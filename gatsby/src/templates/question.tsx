@@ -45,7 +45,7 @@ export default ({ data }: IQuestion) => {
 
   return (
     <div style={{ maxWidth: 600, margin: "0 auto", padding: "20px 0" }}>
-      <Card style={{ padding: 15 }}>
+      <Card style={{ padding: 50 }}>
         <h1
           style={{
             marginBottom: 30,
