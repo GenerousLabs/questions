@@ -27,6 +27,20 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-transformer-yaml`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+              name: `questions`,
+              path: `${__dirname}/../questions`,
+            },
+          },
+        ],
+      },
+    },
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
@@ -76,7 +90,8 @@ module.exports = {
         // Don't cache-bust JS or CSS files, and anything in the static directory,
         // since these files have unique URLs and their contents will never change
         dontCacheBustUrlsMatching: /(\.js$|\.css$|static\/)/,
-        runtimeCaching: [{
+        runtimeCaching: [
+          {
             // Use networkFirst
             urlPattern: /(\.js$|\.css$|static\/)/,
             handler: `networkFirst`,
