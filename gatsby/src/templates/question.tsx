@@ -62,6 +62,8 @@ export default ({ data }: IQuestion) => {
         >
           {questions[dayIndex]}
         </h1>
+      </Card>
+      <p>
         {dayIndex > 0 ? (
           <Button
             variant="contained"
@@ -82,7 +84,7 @@ export default ({ data }: IQuestion) => {
             Tomorrow
           </Button>
         ) : null}
-      </Card>
+      </p>
       <h1>All Questions</h1>
       <ul>
         {questions.map((question, i) => (
