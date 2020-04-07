@@ -60,9 +60,9 @@ export default ({ data }: IQuestion) => {
         <Typography variant="h2" component="h1" style={{ textAlign: "center" }}>
           {questions[dayIndex]}
         </Typography>
-        <p style={{ textAlign: "center", margin: "50px 0 0" }}>
+        <Typography style={{ textAlign: "center", margin: "50px 0 0" }}>
           {getDateFromDayIndex(dayIndex)}
-        </p>
+        </Typography>
       </Card>
       <p>
         {dayIndex > 0 ? (
