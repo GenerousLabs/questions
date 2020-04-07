@@ -1,8 +1,8 @@
 import * as React from "react"
 import { graphql } from "gatsby"
 import { Card, Button } from "@material-ui/core"
-import Responsive from "react-responsive"
-import { LocalDate, ChronoUnit } from "@js-joda/core"
+import { LocalDate, ChronoUnit, DateTimeFormatter } from "@js-joda/core"
+import { Locale } from "@js-joda/locale_en"
 
 import THEME from "../theme"
 import config from "../config"
@@ -42,6 +42,12 @@ const getDefaultDayIndex = (): number => {
   return 0
 }
 
+const getDateFromDayIndex = (index: number): string => {
+  return LocalDate.now()
+    .plusDays(index)
+    .format(DateTimeFormatter.ofPattern("d MMMM YYYY").withLocale(Locale.US))
+}
+
 export default ({ data }: IQuestion) => {
   const { questions } = data.questionsYaml
   const numberOfQuestions = questions.length
@@ -62,6 +68,9 @@ export default ({ data }: IQuestion) => {
         >
           {questions[dayIndex]}
         </h1>
+        <p style={{ textAlign: "center", margin: "50px 0 0" }}>
+          {getDateFromDayIndex(dayIndex)}
+        </p>
       </Card>
       <p>
         {dayIndex > 0 ? (
