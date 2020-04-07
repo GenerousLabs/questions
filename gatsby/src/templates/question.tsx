@@ -27,7 +27,9 @@ const getDefaultDayIndex = (): number => {
       return start.until(today, ChronoUnit.DAYS)
     }
   } catch (e) {}
-  return 0
+  // TODO Change this back to 0 for deployment
+  // return 0
+  return 1
 }
 
 const saveToday = () => {
