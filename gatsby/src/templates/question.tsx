@@ -19,16 +19,14 @@ interface IQuestion {
 }
 
 const getDefaultDayIndex = (): number => {
-  if (window && window.localStorage) {
-    const maybe = window.localStorage.getItem(startDayStorageKey)
+  try {
+    const maybe = localStorage.getItem(startDayStorageKey)
     if (typeof maybe === "string") {
-      try {
-        const start = LocalDate.parse(maybe)
-        const today = LocalDate.now()
-        return start.until(today, ChronoUnit.DAYS)
-      } catch (e) {}
+      const start = LocalDate.parse(maybe)
+      const today = LocalDate.now()
+      return start.until(today, ChronoUnit.DAYS)
     }
-  }
+  } catch (e) {}
   return 0
 }
 
@@ -39,7 +37,7 @@ const getDateFromDayIndex = (index: number): string => {
 }
 
 const saveToday = () => {
-  window.localStorage.setItem(startDayStorageKey, LocalDate.now().toString())
+  localStorage.setItem(startDayStorageKey, LocalDate.now().toString())
   alert("Today has been saved in your browser #Bm1MbR")
 }
 
