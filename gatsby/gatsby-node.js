@@ -1,9 +1,6 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
-const BLOG_POST_LIMIT = 1000
-const BLOG_POST_COVER_IMAGE_MAX_WIDTH = 800
-
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
   if (node.internal.type === `MarkdownRemark`) {
