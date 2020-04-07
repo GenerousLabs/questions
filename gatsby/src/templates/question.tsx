@@ -2,8 +2,9 @@ import * as React from "react"
 import { graphql } from "gatsby"
 import { Card, Button, Typography } from "@material-ui/core"
 import { LocalDate, ChronoUnit, DateTimeFormatter } from "@js-joda/core"
-import { Locale } from "@js-joda/locale_en"
 
+import QuestionIntro from "../components/shared/QuestionIntro.component"
+import QuestionCard from "../components/shared/QuestionCard.component"
 import THEME from "../theme"
 import config from "../config"
 
@@ -30,30 +31,9 @@ const getDefaultDayIndex = (): number => {
   return 0
 }
 
-const getDateFromDayIndex = (index: number): string => {
-  return LocalDate.now()
-    .plusDays(index)
-    .format(DateTimeFormatter.ofPattern("d MMMM YYYY").withLocale(Locale.US))
-}
-
 const saveToday = () => {
   localStorage.setItem(startDayStorageKey, LocalDate.now().toString())
   alert("Today has been saved in your browser #Bm1MbR")
-}
-
-const QuestionCard = (props: { questions: string[]; dayIndex: number }) => {
-  const { questions, dayIndex } = props
-  return (
-    <Card style={{ padding: 50 }}>
-      <Typography variant="h2" component="h1" style={{ textAlign: "center" }}>
-        {questions[dayIndex]}
-      </Typography>
-
-      <Typography style={{ textAlign: "center", margin: "50px 0 0" }}>
-        {getDateFromDayIndex(dayIndex)}
-      </Typography>
-    </Card>
-  )
 }
 
 const DayButtons = (props: {
@@ -88,15 +68,38 @@ const DayButtons = (props: {
   )
 }
 
+const Container = (props: { children: React.ReactNode }) => {
+  const { children } = props
+  return (
+    <div style={{ maxWidth: 600, margin: "0 auto", padding: "20px 0" }}>
+      {children}
+    </div>
+  )
+}
+
 export default ({ data }: IQuestion) => {
   const { questions } = data.questionsYaml
   const numberOfQuestions = questions.length
 
   const [dayIndex, setDayIndex] = React.useState(getDefaultDayIndex())
+  const [name, setName] = React.useState("")
+
+  if (name === "") {
+    return (
+      <Container>
+        <QuestionIntro
+          numberOfQuestions={numberOfQuestions}
+          start={() => {
+            setName(prompt("Who would you like to start with?"))
+          }}
+        />
+      </Container>
+    )
+  }
 
   return (
-    <div style={{ maxWidth: 600, margin: "0 auto", padding: "20px 0" }}>
-      <QuestionCard questions={questions} dayIndex={dayIndex} />
+    <Container>
+      <QuestionCard name={name} questions={questions} dayIndex={dayIndex} />
       <DayButtons
         dayIndex={dayIndex}
         setDayIndex={setDayIndex}
@@ -117,7 +120,7 @@ export default ({ data }: IQuestion) => {
       >
         Start today
       </Button>
-    </div>
+    </Container>
   )
 }
 
