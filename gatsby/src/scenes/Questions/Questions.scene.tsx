@@ -5,7 +5,6 @@ import { LocalDate } from "@js-joda/core"
 import { reducer } from "./Questions.reducer"
 import QuestionIntro from "./components/QuestionIntro.component"
 import QuestionCard from "./components/QuestionCard.component"
-import config from "../../../config"
 import QuestionsStorage from "./Questions.storage"
 
 interface IQuestion {
