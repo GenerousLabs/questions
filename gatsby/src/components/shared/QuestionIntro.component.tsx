@@ -5,11 +5,10 @@ import Card from "./Card.component"
 
 interface Props {
   numberOfQuestions: number
-  start: () => void
 }
 
 const QuestionIntro = (props: Props) => {
-  const { numberOfQuestions, start } = props
+  const { numberOfQuestions } = props
 
   return (
     <Card>
@@ -19,16 +18,6 @@ const QuestionIntro = (props: Props) => {
       <Typography>
         Here will be some introductory text explaining how this thing works..
       </Typography>
-      <p style={{ textAlign: "center", marginTop: 50 }}>
-        <Button
-          variant="outlined"
-          onClick={() => {
-            start()
-          }}
-        >
-          Get started
-        </Button>
-      </p>
     </Card>
   )
 }

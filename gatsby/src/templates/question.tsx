@@ -37,42 +37,10 @@ const saveToday = () => {
   alert("Today has been saved in your browser #Bm1MbR")
 }
 
-const DayButtons = (props: {
-  dayIndex: number
-  setDayIndex: (dayIndex: number) => void
-  numberOfQuestions: number
-}) => {
-  const { dayIndex, setDayIndex, numberOfQuestions } = props
-  return (
-    <p>
-      {dayIndex > 0 ? (
-        <Button
-          variant="outlined"
-          onClick={() => {
-            setDayIndex(dayIndex - 1)
-          }}
-        >
-          Yesterday
-        </Button>
-      ) : null}
-      {dayIndex < numberOfQuestions - 1 ? (
-        <Button
-          variant="outlined"
-          onClick={() => {
-            setDayIndex(dayIndex + 1)
-          }}
-        >
-          Tomorrow
-        </Button>
-      ) : null}
-    </p>
-  )
-}
-
 const Container = (props: { children: React.ReactNode }) => {
   const { children } = props
   return (
-    <div style={{ maxWidth: 600, margin: "0 auto", padding: "20px 0" }}>
+    <div style={{ maxWidth: 760, margin: "0 auto", padding: "20px 0" }}>
       {children}
     </div>
   )
@@ -82,48 +50,89 @@ export default ({ data }: IQuestion) => {
   const { questions } = data.questionsYaml
   const numberOfQuestions = questions.length
 
+  const [hideIntro, setHideIntro] = React.useState(false)
+  const [hideQuestions, setHideQuestions] = React.useState(false)
   const [dayIndex, setDayIndex] = React.useState(getDefaultDayIndex())
   const [name, setName] = React.useState("")
 
-  if (name === "") {
-    return (
-      <Container>
-        <QuestionIntro
-          numberOfQuestions={numberOfQuestions}
-          start={() => {
-            setName(prompt("Who would you like to start with?"))
-          }}
-        />
-      </Container>
-    )
-  }
-
   return (
     <Container>
-      <Typography variant="h6" component="h2">
+      {hideIntro ? (
+        <p style={{ textAlign: "right" }}>
+          <Button
+            variant="outlined"
+            onClick={() => {
+              setHideIntro(false)
+            }}
+          >
+            Show intro
+          </Button>
+        </p>
+      ) : (
+        <>
+          <Typography variant="h2" component="h2">
+            Intro
+          </Typography>
+          <QuestionIntro numberOfQuestions={numberOfQuestions} />
+          <p style={{ textAlign: "right" }}>
+            <Button
+              variant="outlined"
+              size="small"
+              onClick={() => {
+                setHideIntro(true)
+              }}
+            >
+              Hide intro
+            </Button>
+          </p>
+        </>
+      )}
+      {hideQuestions ? (
+        <p style={{ textAlign: "right" }}>
+          <Button
+            variant="outlined"
+            onClick={() => {
+              setHideQuestions(false)
+            }}
+          >
+            Show questions
+          </Button>
+        </p>
+      ) : (
+        <>
+          <Typography variant="h2" component="h2">
+            Questions
+          </Typography>
+          <ol>
+            {questions.map((question, i) => (
+              <li key={i}>{question}</li>
+            ))}
+          </ol>
+          <p style={{ textAlign: "right" }}>
+            <Button
+              variant="outlined"
+              size="small"
+              onClick={() => {
+                setHideQuestions(true)
+              }}
+            >
+              Hide questions
+            </Button>
+          </p>
+        </>
+      )}
+      <Typography variant="h3" component="h3">
         Today's question
       </Typography>
-      <QuestionCard name={name} questions={questions} dayIndex={dayIndex} />
-      <DayButtons
+      <QuestionCard
+        name={"John"}
+        questions={questions}
         dayIndex={dayIndex}
         setDayIndex={setDayIndex}
         numberOfQuestions={numberOfQuestions}
       />
-      <Typography variant="h2">All Questions</Typography>
-      <ol>
-        {questions.map((question, i) => (
-          <li key={i}>{question}</li>
-        ))}
-      </ol>
-      <Typography variant="h2">Start</Typography>
-      <Button
-        variant="outlined"
-        onClick={() => {
-          saveToday()
-        }}
-      >
-        Start today
-      </Button>
+      <Typography>Start another question sequence</Typography>
+      <Button variant="outlined">Click to start</Button>
     </Container>
   )
 }
