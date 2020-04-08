@@ -1,15 +1,12 @@
 import * as React from "react"
-import { graphql } from "gatsby"
 import { Button, Typography } from "@material-ui/core"
-import { LocalDate, ChronoUnit } from "@js-joda/core"
+import { LocalDate } from "@js-joda/core"
 
-import { reducer, Action } from "./Questions.reducer"
+import { reducer } from "./Questions.reducer"
 import QuestionIntro from "./components/QuestionIntro.component"
 import QuestionCard from "./components/QuestionCard.component"
 import config from "../../../config"
 import QuestionsStorage from "./Questions.storage"
-
-const { startDayStorageKey } = config
 
 interface IQuestion {
   slug: string
