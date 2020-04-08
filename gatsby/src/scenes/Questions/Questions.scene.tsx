@@ -21,29 +21,15 @@ const Container = (props: { children: React.ReactNode }) => {
   )
 }
 
-export default (props: IQuestion) => {
-  const { slug, questions } = props
-  const numberOfQuestions = questions.length
-
-  const { get, save } = React.useMemo(() => {
-    return QuestionsStorage(slug)
-  }, [slug])
-
-  const [state, dispatch] = React.useReducer(reducer, get())
-
-  React.useEffect(() => {
-    dispatch({ type: "INIT", payload: get() })
-  }, [slug])
-
-  React.useEffect(() => {
-    save(state)
-  }, [state])
-
-  const [hideIntro, setHideIntro] = React.useState(false)
-  const [hideQuestions, setHideQuestions] = React.useState(false)
+const Intro = (props: {
+  hideIntro: boolean
+  setHideIntro: (hideIntro: boolean) => void
+  numberOfQuestions: number
+}) => {
+  const { hideIntro, setHideIntro, numberOfQuestions } = props
 
   return (
-    <Container>
+    <>
       {hideIntro ? (
         <p style={{ textAlign: "right" }}>
           <Button
@@ -74,6 +60,18 @@ export default (props: IQuestion) => {
           </p>
         </>
       )}
+    </>
+  )
+}
+
+const QuestionsScene = (props: {
+  questions: string[]
+  hideQuestions: boolean
+  setHideQuestions: (hideQuestions: boolean) => void
+}) => {
+  const { questions, hideQuestions, setHideQuestions } = props
+  return (
+    <>
       {hideQuestions ? (
         <p style={{ textAlign: "right" }}>
           <Button
@@ -108,6 +106,43 @@ export default (props: IQuestion) => {
           </p>
         </>
       )}
+    </>
+  )
+}
+
+export default (props: IQuestion) => {
+  const { slug, questions } = props
+  const numberOfQuestions = questions.length
+
+  const { get, save } = React.useMemo(() => {
+    return QuestionsStorage(slug)
+  }, [slug])
+
+  const [state, dispatch] = React.useReducer(reducer, get())
+
+  React.useEffect(() => {
+    dispatch({ type: "INIT", payload: get() })
+  }, [slug])
+
+  React.useEffect(() => {
+    save(state)
+  }, [state])
+
+  const [hideIntro, setHideIntro] = React.useState(false)
+  const [hideQuestions, setHideQuestions] = React.useState(false)
+
+  return (
+    <Container>
+      <Intro
+        hideIntro={hideIntro}
+        setHideIntro={setHideIntro}
+        numberOfQuestions={numberOfQuestions}
+      />
+      <QuestionsScene
+        questions={questions}
+        hideQuestions={hideQuestions}
+        setHideQuestions={setHideQuestions}
+      />
       <Typography variant="h2">Today's questions</Typography>
       {state.instances.length === 0 ? (
         <Typography style={{ padding: 100, textAlign: "center" }}>
