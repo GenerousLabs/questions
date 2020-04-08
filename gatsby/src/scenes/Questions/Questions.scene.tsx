@@ -16,25 +16,6 @@ interface IQuestion {
   questions: string[]
 }
 
-const getDefaultDayIndex = (): number => {
-  try {
-    const maybe = localStorage.getItem(startDayStorageKey)
-    if (typeof maybe === "string") {
-      const start = LocalDate.parse(maybe)
-      const today = LocalDate.now()
-      return start.until(today, ChronoUnit.DAYS)
-    }
-  } catch (e) {}
-  // TODO Change this back to 0 for deployment
-  // return 0
-  return 1
-}
-
-const saveToday = () => {
-  localStorage.setItem(startDayStorageKey, LocalDate.now().toString())
-  alert("Today has been saved in your browser #Bm1MbR")
-}
-
 const Container = (props: { children: React.ReactNode }) => {
   const { children } = props
   return (
@@ -64,8 +45,6 @@ export default (props: IQuestion) => {
 
   const [hideIntro, setHideIntro] = React.useState(false)
   const [hideQuestions, setHideQuestions] = React.useState(false)
-  const [dayIndex, setDayIndex] = React.useState(getDefaultDayIndex())
-  const [name, setName] = React.useState("")
 
   return (
     <Container>

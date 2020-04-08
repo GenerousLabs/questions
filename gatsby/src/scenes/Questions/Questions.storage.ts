@@ -23,7 +23,7 @@ export default (slug: string) => {
   }
 
   const save = (state: State): void => {
-    localStorage.setItem(key, JSON.stringify(state))
+    window.localStorage.setItem(key, JSON.stringify(state))
   }
 
   return { get, save }
