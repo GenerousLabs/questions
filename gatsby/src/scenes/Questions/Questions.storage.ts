@@ -10,8 +10,11 @@ export default (slug: string) => {
   const key = `${KEY_PREFIX}${slug}`
 
   const get = (): State => {
-    if (window && window.localStorage) {
-      const maybeJson = localStorage.getItem(key)
+    if (
+      typeof window !== "undefined" &&
+      typeof window.localStorage !== "undefined"
+    ) {
+      const maybeJson = window.localStorage.getItem(key)
       if (typeof maybeJson === "string") {
         return JSON.parse(maybeJson) as State
       }
