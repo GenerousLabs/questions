@@ -134,20 +134,23 @@ export default (props: IQuestion) => {
         </>
       )}
       <Typography variant="h2">Today's questions</Typography>
-      <Typography style={{ padding: 100, textAlign: "center" }}>
-        You haven't started yet. Click start to get something going.
-      </Typography>
-      {state.instances.map(({ name, startDate }) => {
-        return (
-          <QuestionCard
-            key={name}
-            name={name}
-            questions={questions}
-            startDate={startDate}
-            dispatch={dispatch}
-          />
-        )
-      })}
+      {state.instances.length === 0 ? (
+        <Typography style={{ padding: 100, textAlign: "center" }}>
+          You haven't started yet. Click start to get something going.
+        </Typography>
+      ) : (
+        state.instances.map(({ name, startDate }) => {
+          return (
+            <QuestionCard
+              key={name}
+              name={name}
+              questions={questions}
+              startDate={startDate}
+              dispatch={dispatch}
+            />
+          )
+        })
+      )}
       <Typography>Start another question sequence</Typography>
       <Button
         variant="outlined"
