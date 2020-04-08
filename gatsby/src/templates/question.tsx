@@ -1,6 +1,7 @@
 import * as React from "react"
 import { graphql } from "gatsby"
 
+import SEO from "../scenes/SEO/SEO.scene"
 import QuestionsScene from "../scenes/Questions/Questions.scene"
 
 interface IQuestion {
@@ -14,7 +15,11 @@ interface IQuestion {
 
 export default ({ data }: IQuestion) => {
   const { slug, questions } = data.questionsYaml
-  return <QuestionsScene slug={slug} questions={questions} />
+  return (
+    <SEO title="Question challenge">
+      <QuestionsScene slug={slug} questions={questions} />
+    </SEO>
+  )
 }
 
 export const query = graphql`
