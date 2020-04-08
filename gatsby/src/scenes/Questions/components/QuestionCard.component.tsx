@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Typography, Button } from "@material-ui/core"
-import { LocalDate, DateTimeFormatter } from "@js-joda/core"
+import { LocalDate, DateTimeFormatter, ChronoUnit } from "@js-joda/core"
 import { Locale } from "@js-joda/locale_en"
 
 import Card from "./Card.component"
@@ -8,9 +8,8 @@ import Card from "./Card.component"
 interface Props {
   name: string
   questions: string[]
-  dayIndex: number
-  setDayIndex: (dayIndex: number) => void
-  numberOfQuestions: number
+  startDate: string
+  setStartDate: (startDate: string) => void
 }
 
 const getDateFromDayIndex = (index: number): string => {
@@ -20,7 +19,17 @@ const getDateFromDayIndex = (index: number): string => {
 }
 
 const QuestionCard = (props: Props) => {
-  const { name, questions, dayIndex, setDayIndex, numberOfQuestions } = props
+  const { name, questions, startDate, setStartDate } = props
+  const numberOfQuestions = questions.length
+
+  const start = LocalDate.parse(startDate)
+  const today = LocalDate.now()
+  const dayIndex = start.until(today, ChronoUnit.DAYS)
+
+  const moveStartDate = (days: number) => {
+    setStartDate(start.plusDays(days).toString())
+  }
+
   return (
     <Card>
       <Typography variant="h3" component="h3">
@@ -39,7 +48,7 @@ const QuestionCard = (props: Props) => {
             variant="outlined"
             size="small"
             onClick={() => {
-              setDayIndex(dayIndex - 1)
+              moveStartDate(1)
             }}
           >
             Back
@@ -51,7 +60,7 @@ const QuestionCard = (props: Props) => {
             variant="outlined"
             size="small"
             onClick={() => {
-              setDayIndex(dayIndex + 1)
+              moveStartDate(-1)
             }}
           >
             Skip

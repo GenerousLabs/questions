@@ -3,9 +3,11 @@ import { graphql } from "gatsby"
 import { Button, Typography } from "@material-ui/core"
 import { LocalDate, ChronoUnit } from "@js-joda/core"
 
+import { reducer, Action } from "./Questions.reducer"
 import QuestionIntro from "./components/QuestionIntro.component"
 import QuestionCard from "./components/QuestionCard.component"
 import config from "../../../config"
+import QuestionsStorage from "./Questions.storage"
 
 const { startDayStorageKey } = config
 
@@ -43,8 +45,22 @@ const Container = (props: { children: React.ReactNode }) => {
 }
 
 export default (props: IQuestion) => {
-  const { questions } = props
+  const { slug, questions } = props
   const numberOfQuestions = questions.length
+
+  const { get, save } = React.useMemo(() => {
+    return QuestionsStorage(slug)
+  }, [slug])
+
+  const [state, dispatch] = React.useReducer(reducer, get())
+
+  React.useEffect(() => {
+    dispatch({ type: "INIT", payload: get() })
+  }, [slug])
+
+  React.useEffect(() => {
+    save(state)
+  }, [state])
 
   const [hideIntro, setHideIntro] = React.useState(false)
   const [hideQuestions, setHideQuestions] = React.useState(false)
@@ -118,15 +134,53 @@ export default (props: IQuestion) => {
         </>
       )}
       <Typography variant="h2">Today's questions</Typography>
-      <QuestionCard
-        name={"John"}
-        questions={questions}
-        dayIndex={dayIndex}
-        setDayIndex={setDayIndex}
-        numberOfQuestions={numberOfQuestions}
-      />
+      <Typography style={{ padding: 100, textAlign: "center" }}>
+        You haven't started yet. Click start to get something going.
+      </Typography>
+      {state.instances.map(({ name, startDate }) => {
+        return (
+          <QuestionCard
+            key={name}
+            name={name}
+            questions={questions}
+            startDate={startDate}
+            setStartDate={(startDate: string) =>
+              dispatch({
+                type: "SET_INSTANCE_DATE",
+                payload: { name, startDate },
+              })
+            }
+          />
+        )
+      })}
       <Typography>Start another question sequence</Typography>
-      <Button variant="outlined">Click to start</Button>
+      <Button
+        variant="outlined"
+        onClick={() => {
+          dispatch({
+            type: "REMOVE_INSTANCE",
+            payload: {
+              name: prompt("Enter name"),
+            },
+          })
+        }}
+      >
+        Click to delete
+      </Button>{" "}
+      <Button
+        variant="outlined"
+        onClick={() => {
+          dispatch({
+            type: "CREATE_INSTANCE",
+            payload: {
+              name: prompt("Enter name"),
+              startDate: LocalDate.now().toString(),
+            },
+          })
+        }}
+      >
+        Click to start
+      </Button>
     </Container>
   )
 }
