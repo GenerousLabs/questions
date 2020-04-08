@@ -22,47 +22,43 @@ const getDateFromDayIndex = (index: number): string => {
 const QuestionCard = (props: Props) => {
   const { name, questions, dayIndex, setDayIndex, numberOfQuestions } = props
   return (
-    <>
-      <Typography variant="h1" component="h2">
-        {name}
+    <Card>
+      <Typography variant="h3" component="h3">
+        For: {name}
       </Typography>
-      <Card>
-        {dayIndex > 0 ? (
-          <Typography>
-            Yesterday's question: {questions[dayIndex - 1]}
-          </Typography>
-        ) : null}
-        <Typography variant="h2" component="h2" style={{ textAlign: "center" }}>
-          {questions[dayIndex]}
-        </Typography>
+      {dayIndex > 0 ? (
+        <Typography>Yesterday's question: {questions[dayIndex - 1]}</Typography>
+      ) : null}
+      <Typography variant="h2" component="h2" style={{ textAlign: "center" }}>
+        {questions[dayIndex]}
+      </Typography>
 
-        <Typography style={{ textAlign: "center", margin: "50px 0 0" }}>
-          {dayIndex > 0 ? (
-            <Button
-              variant="outlined"
-              size="small"
-              onClick={() => {
-                setDayIndex(dayIndex - 1)
-              }}
-            >
-              Back
-            </Button>
-          ) : null}
-          {` ${getDateFromDayIndex(dayIndex)} `}
-          {dayIndex < numberOfQuestions - 1 ? (
-            <Button
-              variant="outlined"
-              size="small"
-              onClick={() => {
-                setDayIndex(dayIndex + 1)
-              }}
-            >
-              Skip
-            </Button>
-          ) : null}
-        </Typography>
-      </Card>
-    </>
+      <Typography style={{ textAlign: "center", margin: "50px 0 0" }}>
+        {dayIndex > 0 ? (
+          <Button
+            variant="outlined"
+            size="small"
+            onClick={() => {
+              setDayIndex(dayIndex - 1)
+            }}
+          >
+            Back
+          </Button>
+        ) : null}
+        {` ${getDateFromDayIndex(dayIndex)} `}
+        {dayIndex < numberOfQuestions - 1 ? (
+          <Button
+            variant="outlined"
+            size="small"
+            onClick={() => {
+              setDayIndex(dayIndex + 1)
+            }}
+          >
+            Skip
+          </Button>
+        ) : null}
+      </Typography>
+    </Card>
   )
 }
 

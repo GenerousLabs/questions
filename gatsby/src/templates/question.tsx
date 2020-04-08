@@ -121,9 +121,7 @@ export default ({ data }: IQuestion) => {
           </p>
         </>
       )}
-      <Typography variant="h3" component="h3">
-        Today's question
-      </Typography>
+      <Typography variant="h2">Today's questions</Typography>
       <QuestionCard
         name={"John"}
         questions={questions}
