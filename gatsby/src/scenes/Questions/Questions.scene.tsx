@@ -144,29 +144,11 @@ export default (props: IQuestion) => {
             name={name}
             questions={questions}
             startDate={startDate}
-            setStartDate={(startDate: string) =>
-              dispatch({
-                type: "SET_INSTANCE_DATE",
-                payload: { name, startDate },
-              })
-            }
+            dispatch={dispatch}
           />
         )
       })}
       <Typography>Start another question sequence</Typography>
-      <Button
-        variant="outlined"
-        onClick={() => {
-          dispatch({
-            type: "REMOVE_INSTANCE",
-            payload: {
-              name: prompt("Enter name"),
-            },
-          })
-        }}
-      >
-        Click to delete
-      </Button>{" "}
       <Button
         variant="outlined"
         onClick={() => {

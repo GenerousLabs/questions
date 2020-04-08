@@ -4,12 +4,13 @@ import { LocalDate, DateTimeFormatter, ChronoUnit } from "@js-joda/core"
 import { Locale } from "@js-joda/locale_en"
 
 import Card from "./Card.component"
+import { Action } from "../Questions.reducer"
 
 interface Props {
   name: string
   questions: string[]
   startDate: string
-  setStartDate: (startDate: string) => void
+  dispatch: React.Dispatch<Action>
 }
 
 const getDateFromDayIndex = (index: number): string => {
@@ -19,7 +20,7 @@ const getDateFromDayIndex = (index: number): string => {
 }
 
 const QuestionCard = (props: Props) => {
-  const { name, questions, startDate, setStartDate } = props
+  const { name, questions, startDate, dispatch } = props
   const numberOfQuestions = questions.length
 
   const start = LocalDate.parse(startDate)
@@ -27,7 +28,10 @@ const QuestionCard = (props: Props) => {
   const dayIndex = start.until(today, ChronoUnit.DAYS)
 
   const moveStartDate = (days: number) => {
-    setStartDate(start.plusDays(days).toString())
+    dispatch({
+      type: "SET_INSTANCE_DATE",
+      payload: { name, startDate: start.plusDays(days).toString() },
+    })
   }
 
   return (
@@ -53,8 +57,7 @@ const QuestionCard = (props: Props) => {
           >
             Back
           </Button>
-        ) : null}
-        {` ${getDateFromDayIndex(dayIndex)} `}
+        ) : null}{" "}
         {dayIndex < numberOfQuestions - 1 ? (
           <Button
             variant="outlined"
@@ -65,7 +68,18 @@ const QuestionCard = (props: Props) => {
           >
             Skip
           </Button>
-        ) : null}
+        ) : null}{" "}
+        <Button
+          variant="outlined"
+          size="small"
+          onClick={() => {
+            if (confirm("Are you sure you want to delete this instance?")) {
+              dispatch({ type: "REMOVE_INSTANCE", payload: { name } })
+            }
+          }}
+        >
+          Delete
+        </Button>
       </Typography>
     </Card>
   )
