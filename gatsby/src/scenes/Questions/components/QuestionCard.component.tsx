@@ -54,7 +54,7 @@ const QuestionCard = (props: Props) => {
             }}
           >
             Delete
-            <Delete fontSize="small" />
+            <Delete className={classes.deleteIcon} />
           </Typography>
         </div>
       </div>
@@ -123,6 +123,10 @@ const useStyles = makeStyles(theme => {
       alignItems: "center",
       justifyContent: "flex-end",
       flexDirection: "row",
+    },
+    deleteIcon: {
+      fontSize: 22,
+      color: "#80848e",
     },
     card: {
       marginTop: 13,

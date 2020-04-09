@@ -40,6 +40,8 @@ const useStyles = makeStyles(theme => {
       fontSize: 21,
       fontWeight: "bold",
       textAlign: "center",
+      marginTop: 40,
+      marginBottom: 12,
     },
     p: {
       fontSize: 16,
