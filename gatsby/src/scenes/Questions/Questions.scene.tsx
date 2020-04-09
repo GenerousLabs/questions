@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Button, Typography } from "@material-ui/core"
+import { Button, Typography, Divider, makeStyles } from "@material-ui/core"
 import { LocalDate } from "@js-joda/core"
 
 import { reducer } from "./Questions.reducer"
@@ -23,6 +23,7 @@ const Container = (props: { children: React.ReactNode }) => {
 }
 
 const QuestionsScene = (props: IQuestion) => {
+  const classes = useStyles()
   const { slug, questions } = props
   const numberOfQuestions = questions.length
 
@@ -54,6 +55,7 @@ const QuestionsScene = (props: IQuestion) => {
         hideQuestions={hideQuestions}
         setHideQuestions={setHideQuestions}
       />
+      <Divider className={classes.divider} />
       <Typography variant="h2">Today's questions</Typography>
       {state.instances.length === 0 ? (
         <Typography style={{ padding: 100, textAlign: "center" }}>
@@ -92,3 +94,12 @@ const QuestionsScene = (props: IQuestion) => {
 }
 
 export default QuestionsScene
+
+const useStyles = makeStyles(theme => {
+  return {
+    divider: {
+      marginTop: 40,
+      marginBottom: 40,
+    },
+  }
+})
