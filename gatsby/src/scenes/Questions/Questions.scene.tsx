@@ -56,7 +56,6 @@ const QuestionsScene = (props: IQuestion) => {
         setHideQuestions={setHideQuestions}
       />
       <Divider className={classes.divider} />
-      <Typography variant="h2">Today's questions</Typography>
       {state.instances.length === 0 ? (
         <Typography style={{ padding: 100, textAlign: "center" }}>
           You haven't started yet. Click start to get something going.
