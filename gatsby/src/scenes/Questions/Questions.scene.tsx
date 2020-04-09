@@ -73,9 +73,12 @@ const QuestionsScene = (props: IQuestion) => {
           )
         })
       )}
-      <Typography>Start another question sequence</Typography>
+      <Typography className={classes.p}>
+        Would you like to start these questions with someone else?
+      </Typography>
       <Button
         variant="outlined"
+        size="small"
         onClick={() => {
           dispatch({
             type: "CREATE_INSTANCE",
@@ -86,7 +89,7 @@ const QuestionsScene = (props: IQuestion) => {
           })
         }}
       >
-        Click to start
+        + Add another person
       </Button>
     </Container>
   )
@@ -99,6 +102,11 @@ const useStyles = makeStyles(theme => {
     divider: {
       marginTop: 40,
       marginBottom: 40,
+    },
+    p: {
+      fontSize: 16,
+      marginTop: 15,
+      marginBottom: 15,
     },
   }
 })
