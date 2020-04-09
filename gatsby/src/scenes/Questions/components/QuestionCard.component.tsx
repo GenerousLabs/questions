@@ -58,7 +58,7 @@ const QuestionCard = (props: Props) => {
           </Typography>
         </div>
       </div>
-      <Card elevation={2} className={classes.card}>
+      <Card elevation={4} className={classes.card}>
         <Typography className={classes.cardHeader}>Today's Question</Typography>
         <Typography variant="h2" component="h2" className={classes.question}>
           {questions[dayIndex]}
