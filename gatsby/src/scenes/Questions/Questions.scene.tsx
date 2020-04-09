@@ -4,6 +4,7 @@ import { LocalDate } from "@js-joda/core"
 
 import { reducer } from "./Questions.reducer"
 import QuestionIntro from "./components/QuestionIntro.component"
+import QuestionsList from "./components/QuestionsList.component"
 import QuestionCard from "./components/QuestionCard.component"
 import QuestionsStorage from "./Questions.storage"
 
@@ -21,96 +22,7 @@ const Container = (props: { children: React.ReactNode }) => {
   )
 }
 
-const Intro = (props: {
-  hideIntro: boolean
-  setHideIntro: (hideIntro: boolean) => void
-  numberOfQuestions: number
-}) => {
-  const { hideIntro, setHideIntro, numberOfQuestions } = props
-
-  return (
-    <>
-      {hideIntro ? (
-        <p style={{ textAlign: "right" }}>
-          <Button
-            variant="outlined"
-            onClick={() => {
-              setHideIntro(false)
-            }}
-          >
-            Show intro
-          </Button>
-        </p>
-      ) : (
-        <>
-          <Typography variant="h2" component="h2">
-            Intro
-          </Typography>
-          <QuestionIntro numberOfQuestions={numberOfQuestions} />
-          <p style={{ textAlign: "right" }}>
-            <Button
-              variant="outlined"
-              size="small"
-              onClick={() => {
-                setHideIntro(true)
-              }}
-            >
-              Hide intro
-            </Button>
-          </p>
-        </>
-      )}
-    </>
-  )
-}
-
-const QuestionsScene = (props: {
-  questions: string[]
-  hideQuestions: boolean
-  setHideQuestions: (hideQuestions: boolean) => void
-}) => {
-  const { questions, hideQuestions, setHideQuestions } = props
-  return (
-    <>
-      {hideQuestions ? (
-        <p style={{ textAlign: "right" }}>
-          <Button
-            variant="outlined"
-            onClick={() => {
-              setHideQuestions(false)
-            }}
-          >
-            Show questions
-          </Button>
-        </p>
-      ) : (
-        <>
-          <Typography variant="h2" component="h2">
-            Questions
-          </Typography>
-          <ol>
-            {questions.map((question, i) => (
-              <li key={i}>{question}</li>
-            ))}
-          </ol>
-          <p style={{ textAlign: "right" }}>
-            <Button
-              variant="outlined"
-              size="small"
-              onClick={() => {
-                setHideQuestions(true)
-              }}
-            >
-              Hide questions
-            </Button>
-          </p>
-        </>
-      )}
-    </>
-  )
-}
-
-export default (props: IQuestion) => {
+const QuestionsScene = (props: IQuestion) => {
   const { slug, questions } = props
   const numberOfQuestions = questions.length
 
@@ -129,16 +41,15 @@ export default (props: IQuestion) => {
   }, [state])
 
   const [hideIntro, setHideIntro] = React.useState(false)
-  const [hideQuestions, setHideQuestions] = React.useState(false)
+  const [hideQuestions, setHideQuestions] = React.useState(true)
 
   return (
     <Container>
-      <Intro
-        hideIntro={hideIntro}
-        setHideIntro={setHideIntro}
+      <QuestionIntro
         numberOfQuestions={numberOfQuestions}
+        setHideQuestions={setHideQuestions}
       />
-      <QuestionsScene
+      <QuestionsList
         questions={questions}
         hideQuestions={hideQuestions}
         setHideQuestions={setHideQuestions}
@@ -179,3 +90,5 @@ export default (props: IQuestion) => {
     </Container>
   )
 }
+
+export default QuestionsScene

@@ -5,10 +5,11 @@ import Card from "./Card.component"
 
 interface Props {
   numberOfQuestions: number
+  setHideQuestions: (hideQuestions: boolean) => void
 }
 
 const QuestionIntro = (props: Props) => {
-  const { numberOfQuestions } = props
+  const { numberOfQuestions, setHideQuestions } = props
 
   return (
     <Card>
@@ -17,6 +18,16 @@ const QuestionIntro = (props: Props) => {
       </Typography>
       <Typography>
         Here will be some introductory text explaining how this thing works..
+      </Typography>
+      <Typography>
+        For a{" "}
+        <a
+          onClick={() => {
+            setHideQuestions(false)
+          }}
+        >
+          sneak preview click here
+        </a>
       </Typography>
     </Card>
   )
