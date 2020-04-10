@@ -41,6 +41,8 @@ const QuestionsScene = (props: IQuestion) => {
     save(state)
   }, [state])
 
+  const hasAtLeastOneInstance = state.instances.length > 0
+
   const [hideIntro, setHideIntro] = React.useState(false)
   const [hideQuestions, setHideQuestions] = React.useState(true)
 
@@ -74,7 +76,9 @@ const QuestionsScene = (props: IQuestion) => {
         })
       )}
       <Typography className={classes.p}>
-        Would you like to start these questions with someone else?
+        {hasAtLeastOneInstance
+          ? "Would you like to start these questions with someone else?"
+          : "Who would you like to start the 28 day question challenge with?"}
       </Typography>
       <Button
         variant="outlined"
@@ -89,7 +93,7 @@ const QuestionsScene = (props: IQuestion) => {
           })
         }}
       >
-        + Add another person
+        + {hasAtLeastOneInstance ? "Add another person" : "Add a person"}
       </Button>
     </Container>
   )
