@@ -16,7 +16,7 @@ interface IQuestion {
 const Container = (props: { children: React.ReactNode }) => {
   const { children } = props
   return (
-    <div style={{ maxWidth: 780, margin: "0 auto", padding: "20px 0" }}>
+    <div style={{ maxWidth: 800, margin: "0 auto", padding: "20px 10px" }}>
       {children}
     </div>
   )

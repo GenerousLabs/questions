@@ -58,7 +58,7 @@ const QuestionCard = (props: Props) => {
           </Typography>
         </div>
       </div>
-      <Card className={classes.card}>
+      <Card elevation={4} className={classes.card}>
         <Typography className={classes.cardHeader}>Today's Question</Typography>
         <Typography variant="h2" component="h2" className={classes.question}>
           {questions[dayIndex]}
@@ -145,7 +145,9 @@ const useStyles = makeStyles((theme) => {
       fontWeight: "bold",
       marginTop: 20,
       marginBottom: 20,
-      maxWidth: 578,
+      maxWidth: 598,
+      paddingLeft: 20,
+      paddingRight: 20,
       marginLeft: "auto",
       marginRight: "auto",
     },
