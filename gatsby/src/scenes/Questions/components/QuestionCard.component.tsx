@@ -100,7 +100,7 @@ const QuestionCard = (props: Props) => {
 
 export default QuestionCard
 
-const useStyles = makeStyles(theme => {
+const useStyles = makeStyles((theme) => {
   return {
     header: {
       display: "flex",

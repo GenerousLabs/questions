@@ -97,7 +97,7 @@ const QuestionsScene = (props: IQuestion) => {
 
 export default QuestionsScene
 
-const useStyles = makeStyles(theme => {
+const useStyles = makeStyles((theme) => {
   return {
     divider: {
       marginTop: 40,
