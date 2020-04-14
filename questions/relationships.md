@@ -1,5 +1,6 @@
 slug: relationships
 author: Erin JF
+intro: An introduction will be updated
 questions:
   - What is commitment to you?
   - What kinds of relationships do you have in your life?
@@ -29,3 +30,9 @@ questions:
   - Have you ever questioned whether monogamy is right for you?
   - When you think of monogamy, what’s the first word that comes to mind and why?
   - When you think of open relationships, what’s the first word that comes to mind and why?
+---
+Foo
+
+Bar
+
+* Markdown
