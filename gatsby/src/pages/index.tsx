@@ -11,13 +11,13 @@ const Index = () => {
     <div className={classes.container}>
       <SEO title="Question Challenge" />
       <Typography variant="h1">Work in progress</Typography>
-      <p>Try some of these questions to get started</p>
-      <p>
+      <Typography>Try some of these questions to get started</Typography>
+      <Typography>
         <Link to="/sean">Sean</Link>
-      </p>{" "}
-      <p>
+      </Typography>
+      <Typography>
         <Link to="/relationships">Relationships</Link>
-      </p>
+      </Typography>
     </div>
   )
 }
