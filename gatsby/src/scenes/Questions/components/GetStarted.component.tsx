@@ -1,8 +1,13 @@
 import * as React from "react"
 import { Grid, makeStyles, Typography, Divider } from "@material-ui/core"
 
-const GetStarted = () => {
+interface Props {
+  numberOfQuestions: number
+}
+
+const GetStarted = (props: Props) => {
   const classes = useStyles()
+  const { numberOfQuestions = 28 } = props
 
   return (
     <div>
@@ -20,7 +25,7 @@ const GetStarted = () => {
           <Typography className={classes.title}>Make the commitment</Typography>
           <Typography className={classes.p}>
             Swear a blood oath (or don't) that you will commit at least 10
-            minutes a day for 28 days.
+            minutes a day for {numberOfQuestions} days.
           </Typography>
         </Grid>
         <Grid item xs={4} className={classes.child}>

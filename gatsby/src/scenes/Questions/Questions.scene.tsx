@@ -47,8 +47,6 @@ const QuestionsScene = (props: IQuestion) => {
 
   const hasAtLeastOneInstance = state.instances.length > 0
 
-  const [hideQuestions, setHideQuestions] = React.useState(true)
-
   return (
     <Container>
       <QuestionIntro
@@ -71,7 +69,7 @@ const QuestionsScene = (props: IQuestion) => {
           )
         })
       ) : (
-        <GetStarted />
+        <GetStarted numberOfQuestions={numberOfQuestions} />
       )}
       <Typography className={classes.p}>
         {hasAtLeastOneInstance
