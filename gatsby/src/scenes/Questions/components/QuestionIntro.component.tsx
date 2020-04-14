@@ -2,7 +2,7 @@ import * as React from "react"
 import { Typography, Button, makeStyles } from "@material-ui/core"
 
 interface Props {
-  title?: string
+  title: string
   numberOfQuestions: number
   setHideQuestions: (hideQuestions: boolean) => void
 }
