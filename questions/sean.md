@@ -4,10 +4,34 @@ title: The Question Game
 intro: The Question Game is a shared question app. It takes a set of questions, designed to take you and a partner beyond small talk to a place where you really get to know each other, and presents them one by one for 28 days. It takes time, commitment, and courage and gives you genuine connection.
 author: Sean WC
 questions:
-  - Does this need the same count?
-  - Will it have spaces?
-  - When does three arrive?
-  - Even more questions now?
+  - Set an intention for this process. Share it with your partner. Why is that your intention?
+  - Pick a person who knows you well. How would they describe you? What is something they don't know about you?
+  - Describe, in your own words, who you think your partner is. What is something that you would like to know about them?
+  - What is something about yourself that you would like your partner to know? What is something about yourself that you are nervous about your partner knowing?
+  - What is it about your partner that made you want to do 28 questions with them? What do you hope it will bring about?
+  - What is your favorite thing about where you live?
+  - What was your favourite moment in the last few days?
+  - What was the saddest moment of your life? Why was it so sad for you?
+  - What is the greatest achievement in your life? Share your recollection of it. Why is it so meaningful?
+  - Who was the most important person for you, outside of your immediate family, growing up? Why?
+  - What's one thing in your upbringing you're grateful for?
+  - If you could go back in time, what is one piece of advice you would give your younger self?
+  - Have you ever had your heart broken? Share the story.
+  - What is the first significant thing you bought with your own money?
+  - What is the worst job you've had?
+  - If you could go back in time, what time would you travel to and why?
+  - Do you believe in a higher power? How does this influence the way you live?
+  - If you could steal one thing, without consequence, what would it be?
+  - What is your reason for living? What gets you out of bed in the morning?
+  - Have you ever had an experience you couldn't explain? Share it with your partner (try to refrain from seeking to explain your partner's experience unless invited to do so).
+  - Is there a conspiracy theory or other 'outlandish' idea you consider credible? Why?
+  - If you could choose, right now, one thing to achieve in your life, what would it be and why?
+  - What steps could you take over the next month to increase your chances of bringing that goal into reality? Talk with your partner about how they might support you in this.
+  - What is one relationship in your life you would like to improve? How would you like it to change?
+  - For what would you like to be remembered?
+  - What do you most value being able to give to others?
+  - What is the one thing you have most enjoyed learning in this process? What is the one thing you have most enjoyed sharing in this process?
+  - How do you feel answering these questions together has changed your relationship with your partner? How would you like that relationship to grow in the future?
 ---
 
 # Why
@@ -31,12 +55,15 @@ The Question Game is a shared question app. It takes a set of questions, designe
 ## Get started
 
 ### 1. Invite a friend
+
 Find someone you'd like to know better, send them this page, invite them to play.
 
 ### 2. Make the commitment
+
 Swear a blood oath (or don't) that you will commit at least 10 minutes a day for 28 days.
 
 ### 3. Get started together
+
 Make sure your question sets are synchronised by clicking 'add a person' at the same time.
 
 # Rules
@@ -56,14 +83,15 @@ Life's too short to be comfortable. Try to be a little more vulnerable than you 
 Suggestion #4
 Be gentle and listen deeply. You are being given a gift of vulnerability, and that is something worth honouring.
 
-
 # Extra
+
 Get started
+
 1. Invite a friend
-Find someone you'd like to know better, send them this page, invite them to play.
+   Find someone you'd like to know better, send them this page, invite them to play.
 
 2. Make the commitment
-Agree on the time and energy commitment you're happy with and commit to it.
+   Agree on the time and energy commitment you're happy with and commit to it.
 
 3. Get started together
-Make sure your question sets are synchronised by clicking 'add a person' at the same time.
+   Make sure your question sets are synchronised by clicking 'add a person' at the same time.
