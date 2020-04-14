@@ -24,8 +24,8 @@ const GetStarted = (props: Props) => {
           <Typography className={classes.number}>2</Typography>
           <Typography className={classes.title}>Make the commitment</Typography>
           <Typography className={classes.p}>
-            Swear a blood oath (or don't) that you will commit at least 10
-            minutes a day for {numberOfQuestions} days.
+            Agree on the time and energy commitment you're happy with and commit
+            to it.
           </Typography>
         </Grid>
         <Grid item xs={4} className={classes.child}>
