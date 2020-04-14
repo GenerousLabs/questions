@@ -1,3 +1,4 @@
+---
 slug: relationships
 author: Erin JF
 intro: An introduction will be updated
@@ -31,8 +32,9 @@ questions:
   - When you think of monogamy, what’s the first word that comes to mind and why?
   - When you think of open relationships, what’s the first word that comes to mind and why?
 ---
+
 Foo
 
 Bar
 
-* Markdown
+- Markdown
