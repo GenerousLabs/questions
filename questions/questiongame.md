@@ -1,5 +1,5 @@
 ---
-slug: QuestionGame
+slug: questiongame
 title: The Question Game
 intro: The Question Game is a shared question app. It takes a set of questions, designed to take you and a partner beyond small talk to a place where you really get to know each other, and presents them one by one for 28 days. It takes time, commitment, and courage and turns them into genuine connection.
 author: Sean WC
