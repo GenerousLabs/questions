@@ -9,8 +9,12 @@ import QuestionCard from "./components/QuestionCard.component"
 import QuestionsStorage from "./Questions.storage"
 
 interface IQuestion {
+  title: string
+  intro: string
+  author: string
   slug: string
   questions: string[]
+  aboutHtml: string
 }
 
 const Container = (props: { children: React.ReactNode }) => {
@@ -24,7 +28,7 @@ const Container = (props: { children: React.ReactNode }) => {
 
 const QuestionsScene = (props: IQuestion) => {
   const classes = useStyles()
-  const { slug, questions } = props
+  const { title, intro, author, aboutHtml, slug, questions } = props
   const numberOfQuestions = questions.length
 
   const { get, save } = React.useMemo(() => {
@@ -43,12 +47,13 @@ const QuestionsScene = (props: IQuestion) => {
 
   const hasAtLeastOneInstance = state.instances.length > 0
 
-  const [hideIntro, setHideIntro] = React.useState(false)
   const [hideQuestions, setHideQuestions] = React.useState(true)
 
   return (
     <Container>
       <QuestionIntro
+        title={title}
+        intro={intro}
         numberOfQuestions={numberOfQuestions}
         setHideQuestions={setHideQuestions}
       />

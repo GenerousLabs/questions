@@ -1,14 +1,14 @@
 const path = require(`path`)
-const { createFilePath } = require(`gatsby-source-filesystem`)
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
   if (node.internal.type === `MarkdownRemark`) {
-    const slug = createFilePath({ node, getNode, basePath: `pages` })
+    // Copy `collection` value from parent to markdown
+    const parent = getNode(node.parent)
     createNodeField({
       node,
-      name: `slug`,
-      value: slug,
+      name: "collection",
+      value: parent.sourceInstanceName,
     })
   }
 }
@@ -17,21 +17,28 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
   return graphql(`
     {
-      allQuestionsYaml {
+      allMarkdownRemark(
+        filter: { fields: { collection: { eq: "questions" } } }
+      ) {
         nodes {
-          slug
+          id
+          frontmatter {
+            slug
+          }
         }
       }
     }
-  `).then(result => {
+  `).then((result) => {
     const questionTemplate = path.resolve(`./src/templates/question.tsx`)
 
-    result.data.allQuestionsYaml.nodes.forEach(node => {
-      const { slug } = node
+    result.data.allMarkdownRemark.nodes.forEach((node) => {
+      const { id, frontmatter } = node
+      const { slug } = frontmatter
       createPage({
         path: `/${slug}/`,
         component: questionTemplate,
         context: {
+          id,
           slug,
         },
       })

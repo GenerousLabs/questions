@@ -22,22 +22,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `src`,
-        path: `${__dirname}/src/`,
-      },
-    },
-    {
-      resolve: `gatsby-transformer-yaml`,
-      options: {
-        plugins: [
-          {
-            resolve: `gatsby-source-filesystem`,
-            options: {
-              name: `questions`,
-              path: `${__dirname}/../questions`,
-            },
-          },
-        ],
+        name: `questions`,
+        path: `${__dirname}/../questions`,
       },
     },
     {
