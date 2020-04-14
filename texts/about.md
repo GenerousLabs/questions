@@ -27,9 +27,19 @@ A little more concretely, it's kind of like a tool where you can put in your own
 
 # How
 
-A Question of Connection is a shared question app. It takes a set of questions designed to facilitate vulnerability and connection between two people, and presents them one by one. You can use the default questions or you can set your own. You can use the default timing (day by day) or you can work through the questions as quickly as you like.
+The Question Game is a shared question app. It takes a set of questions, designed to take you and a partner beyond small talk to a place where you really get to know each other, and presents them one by one for 28 days. It takes time, commitment, and courage and gives you genuine connection.
 
-Find a friend, partner, lover, family member, or someone you just want to be closer with, ask if they would like to strengthen the connection you share (and give them an idea of what, in this case, that involves), and [get started](https://generous-questions.netlify.com/sean/).
+## Steps
+
+### 1. Invite a friend
+Find someone you'd like to know better, send them to this page, and invite them to play.
+
+### 2. Make the commitment
+Swear a blood oath (or don't) that you will commit 10 minutes a day, for 28 days.
+
+### 3. Click start together
+Make sure your question sets are synchronised by clicking 'Start' at the same time.
+
 
 # Rules
 
