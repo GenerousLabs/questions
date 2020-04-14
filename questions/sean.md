@@ -1,19 +1,19 @@
 ---
 slug: QuestionGame
 title: The Question Game
-intro: The Question Game is a shared question app. It takes a set of questions, designed to take you and a partner beyond small talk to a place where you really get to know each other, and presents them one by one for 28 days. It takes time, commitment, and courage and gives you genuine connection.
+intro: The Question Game is a shared question app. It takes a set of questions, designed to take you and a partner beyond small talk to a place where you really get to know each other, and presents them one by one for 28 days. It takes time, commitment, and courage and turns them into genuine connection.
 author: Sean WC
 questions:
-  - Set an intention for this process. Share it with your partner. Why is that your intention?
+  - Set an intention for the game. Share it with your partner. Why is that your intention?
   - Pick a person who knows you well. How would they describe you? What is something they don't know about you?
   - Describe, in your own words, who you think your partner is. What is something that you would like to know about them?
   - What is something about yourself that you would like your partner to know? What is something about yourself that you are nervous about your partner knowing?
-  - What is it about your partner that made you want to do 28 questions with them? What do you hope it will bring about?
+  - What is it about your partner that made you want to play the question game with them?
   - What is your favorite thing about where you live?
   - What was your favourite moment in the last few days?
   - What was the saddest moment of your life? Why was it so sad for you?
   - What is the greatest achievement in your life? Share your recollection of it. Why is it so meaningful?
-  - Who was the most important person for you, outside of your immediate family, growing up? Why?
+  - Who was the most important person for you, outside of your immediate family, growing up?
   - What's one thing in your upbringing you're grateful for?
   - If you could go back in time, what is one piece of advice you would give your younger self?
   - Have you ever had your heart broken? Share the story.
@@ -30,8 +30,8 @@ questions:
   - What is one relationship in your life you would like to improve? How would you like it to change?
   - For what would you like to be remembered?
   - What do you most value being able to give to others?
-  - What is the one thing you have most enjoyed learning in this process? What is the one thing you have most enjoyed sharing in this process?
-  - How do you feel answering these questions together has changed your relationship with your partner? How would you like that relationship to grow in the future?
+  - What is the one thing you have most enjoyed learning about your partner? What is the one thing you have most enjoyed sharing?
+  - Who else might you like to answer these questions with? Why?
 ---
 
 # Why
