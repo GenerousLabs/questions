@@ -1,16 +1,8 @@
 const path = require(`path`)
-const { createFilePath } = require(`gatsby-source-filesystem`)
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
   if (node.internal.type === `MarkdownRemark`) {
-    const slug = createFilePath({ node, getNode, basePath: `pages` })
-    createNodeField({
-      node,
-      name: `slug`,
-      value: slug,
-    })
-
     // Copy `collection` value from parent to markdown
     const parent = getNode(node.parent)
     createNodeField({
@@ -30,7 +22,7 @@ exports.createPages = ({ graphql, actions }) => {
       ) {
         nodes {
           id
-          fields {
+          frontmatter {
             slug
           }
         }
@@ -40,10 +32,10 @@ exports.createPages = ({ graphql, actions }) => {
     const questionTemplate = path.resolve(`./src/templates/question.tsx`)
 
     result.data.allMarkdownRemark.nodes.forEach((node) => {
-      const { id, fields } = node
-      const { slug } = fields
+      const { id, frontmatter } = node
+      const { slug } = frontmatter
       createPage({
-        path: slug,
+        path: `/${slug}/`,
         component: questionTemplate,
         context: {
           id,
