@@ -6,6 +6,7 @@ import { reducer } from "./Questions.reducer"
 import QuestionIntro from "./components/QuestionIntro.component"
 import QuestionCard from "./components/QuestionCard.component"
 import QuestionsStorage from "./Questions.storage"
+import GetStarted from "./components/GetStarted.component"
 
 interface IQuestion {
   title: string
@@ -57,11 +58,7 @@ const QuestionsScene = (props: IQuestion) => {
         questions={questions}
       />
       <Divider className={classes.divider} />
-      {state.instances.length === 0 ? (
-        <Typography style={{ padding: 100, textAlign: "center" }}>
-          You haven't started yet. Click start to get something going.
-        </Typography>
-      ) : (
+      {hasAtLeastOneInstance ? (
         state.instances.map(({ name, startDate }) => {
           return (
             <QuestionCard
@@ -73,6 +70,8 @@ const QuestionsScene = (props: IQuestion) => {
             />
           )
         })
+      ) : (
+        <GetStarted />
       )}
       <Typography className={classes.p}>
         {hasAtLeastOneInstance
