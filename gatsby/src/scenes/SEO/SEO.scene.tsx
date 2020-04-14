@@ -3,17 +3,16 @@ import { Helmet } from "react-helmet"
 
 type Props = {
   title: string
-  children: React.ReactNode
+  // children: React.ReactNode
 }
 
 const SEO = (props: Props) => {
-  const { title, children } = props
+  const { title } = props
   return (
     <>
       <Helmet>
         <title>{title}</title>
       </Helmet>
-      {children}
     </>
   )
 }

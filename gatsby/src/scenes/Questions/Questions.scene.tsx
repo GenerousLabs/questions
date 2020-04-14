@@ -2,6 +2,7 @@ import * as React from "react"
 import { Button, Typography, Divider, makeStyles } from "@material-ui/core"
 import { LocalDate } from "@js-joda/core"
 
+import SEO from "../SEO/SEO.scene"
 import { reducer } from "./Questions.reducer"
 import QuestionIntro from "./components/QuestionIntro.component"
 import QuestionCard from "./components/QuestionCard.component"
@@ -28,7 +29,7 @@ const Container = (props: { children: React.ReactNode }) => {
 
 const QuestionsScene = (props: IQuestion) => {
   const classes = useStyles()
-  const { title, intro, author, aboutHtml, slug, questions } = props
+  const { author, aboutHtml, slug, questions } = props
   const numberOfQuestions = questions.length
 
   const { get, save } = React.useMemo(() => {
@@ -47,8 +48,16 @@ const QuestionsScene = (props: IQuestion) => {
 
   const hasAtLeastOneInstance = state.instances.length > 0
 
+  const title =
+    props.title.length > 0
+      ? props.title
+      : `${numberOfQuestions} day question challenge`
+
+  const intro = props.intro.length > 0 ? props.intro : `An alternate`
+
   return (
     <Container>
+      <SEO title={title} />
       <QuestionIntro
         title={title}
         intro={intro}

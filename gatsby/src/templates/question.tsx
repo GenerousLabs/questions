@@ -33,11 +33,7 @@ export default ({ data }: IQuestion) => {
     aboutHtml: html,
   }
 
-  return (
-    <SEO title="Question challenge">
-      <QuestionsScene {...sceneProps} />
-    </SEO>
-  )
+  return <QuestionsScene {...sceneProps} />
 }
 
 export const query = graphql`
