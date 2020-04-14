@@ -3,6 +3,7 @@ import { Typography, Button, makeStyles } from "@material-ui/core"
 
 interface Props {
   title: string
+  intro: string
   numberOfQuestions: number
   setHideQuestions: (hideQuestions: boolean) => void
 }
@@ -16,14 +17,14 @@ const QuestionIntro = (props: Props) => {
       ? props.title
       : `${numberOfQuestions} day question challenge`
 
+  const intro = props.intro.length > 0 ? props.intro : `An alternate`
+
   return (
     <>
       <Typography variant="h2" className={classes.h2}>
         {title}
       </Typography>
-      <Typography className={classes.p}>
-        Here will be some introductory text explaining how this thing works..
-      </Typography>
+      <Typography className={classes.p}>{intro}</Typography>
       <Typography className={classes.p}>
         For a{" "}
         <a

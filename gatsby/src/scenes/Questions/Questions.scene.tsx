@@ -53,6 +53,7 @@ const QuestionsScene = (props: IQuestion) => {
     <Container>
       <QuestionIntro
         title={title}
+        intro={intro}
         numberOfQuestions={numberOfQuestions}
         setHideQuestions={setHideQuestions}
       />
