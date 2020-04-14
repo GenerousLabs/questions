@@ -1,16 +1,3 @@
-# Intro
-
-Once you and your partner are ready to get started, click the 'Add a person' button below, enter the name of your partner, and share with them your answer to the first question. If you want to answer another you can skip forward, otherwise come back tomorrow for the next question. Check out the rules of the game [here](https://generous-questions.netlify.com/about#rules).
-
-More info:
-
-* Why
-* What
-* How
-* Rules
-
-***
-
 # Why
 
 As the clocks ticked past midnight on the first of January this year, few of us could have forseen that our collective reality would be so rapidly and unceremoniously upended. The steady rhythm of daily life has been replaced by something chaotic and uncertain. Kids are out of school, adults are out of work, and all of us are now confronted with the fragility of the world on which we depend.
@@ -29,16 +16,16 @@ A little more concretely, it's kind of like a tool where you can put in your own
 
 The Question Game is a shared question app. It takes a set of questions, designed to take you and a partner beyond small talk to a place where you really get to know each other, and presents them one by one for 28 days. It takes time, commitment, and courage and gives you genuine connection.
 
-## Steps
+## Get started
 
 ### 1. Invite a friend
-Find someone you'd like to know better, send them to this page, and invite them to play.
+Find someone you'd like to know better, send them this page, invite them to play.
 
 ### 2. Make the commitment
-Swear a blood oath (or don't) that you will commit 10 minutes a day, for 28 days.
+Swear a blood oath (or don't) that you will commit at least 10 minutes a day, for 28 days.
 
-### 3. Click start together
-Make sure your question sets are synchronised by clicking 'Start' at the same time.
+### 3. Get started together
+Make sure your question sets are synchronised by clicking 'add a person' at the same time.
 
 
 # Rules
