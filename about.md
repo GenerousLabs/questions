@@ -1,21 +1,24 @@
-#Why
+# Why
+
 As the clocks ticked past midnight on the first of January this year, few of us could have forseen that our collective reality would be so rapidly and unceremoniously upended. The steady rhythm of daily life has been replaced by something chaotic and uncertain. Kids are out of school, adults are out of work, and all of us are now confronted with the fragility of the world on which we depend.
 
 Though none of us seem able to say exactly how, it seems clear that something important has changed. Our complex systems of governance, economics, defense have been shown to be vulnerable. The cracks in the dike are showing, and they may one day cause it to fail.
 
 So the question, then, if we do not have the safety that centuries of long work has sought to bring us, is 'what do we have?'. The answer, as ever, is 'each other'. And so it seems there may be few better ways to spend some of the productive energy liberated by this pandemic than by building better connection with one another.
 
-#What
+# What
+
 A Question of Connection is an experiment in using decentralised tech to build real-world connection between people. That's a little jargon-ey, but basically what it means is that we've built a tool that you can take and do whatever with - change it, extend it, break it. We don't want to determine how you use this thing. We've made it for you, and we just hope that you like it and get some value from using it.
 
 A little more concretely, it's kind of like a tool where you can put in your own details and generate your own app, which you can then share with your friends. In the case of A Question of Connection, you can then use that app to guide you through a set of questions designed to foster closeness, shared understanding, and connection between participants. And of course you can also tweak or change the questions however you like!
 
-#How
+# How
+
 A Question of Connection is a shared question app. It takes a set of questions designed to facilitate vulnerability and connection between two people, and presents them one by one. You can use the default questions or you can set your own. You can use the default timing (day by day) or you can work through the questions as quickly as you like.
 
 Find a friend, partner, lover, family member, or someone you just want to be closer with, ask if they would like to strengthen the connection you share (and give them an idea of what, in this case, that involves), and [get started](https://generous-questions.netlify.com/sean/).
 
-#Rules
+# Rules
 
 Rule #1:
 There are no rules, only suggestions.
