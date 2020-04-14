@@ -40,7 +40,7 @@ const QuestionIntro = (props: Props) => {
         {title}
       </Typography>
       <Typography className={classes.p}>{intro}</Typography>
-      <Typography className={classes.p}>
+      <Typography className={classes.links}>
         <a
           onClick={() => {
             showInfo()
@@ -90,8 +90,14 @@ const useStyles = makeStyles((theme) => {
     p: {
       fontSize: 16,
       textAlign: "center",
-      maxWidth: 500,
+      maxWidth: 700,
       margin: "0 auto",
+    },
+    links: {
+      fontSize: 16,
+      fontWeight: "bold",
+      textAlign: "center",
+      marginTop: 12,
     },
   }
 })
