@@ -22,7 +22,7 @@ The Question Game is a shared question app. It takes a set of questions, designe
 Find someone you'd like to know better, send them this page, invite them to play.
 
 ### 2. Make the commitment
-Swear a blood oath (or don't) that you will commit at least 10 minutes a day, for 28 days.
+Swear a blood oath (or don't) that you will commit at least 10 minutes a day for 28 days.
 
 ### 3. Get started together
 Make sure your question sets are synchronised by clicking 'add a person' at the same time.
