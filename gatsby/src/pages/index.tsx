@@ -13,10 +13,10 @@ const Index = () => {
       <Typography variant="h1">Work in progress</Typography>
       <Typography>Try some of these questions to get started</Typography>
       <Typography>
-        <Link to="/sean">Sean</Link>
+        <Link to="/sean/">Sean</Link>
       </Typography>
       <Typography>
-        <Link to="/relationships">Relationships</Link>
+        <Link to="/relationships/">Relationships</Link>
       </Typography>
     </div>
   )
