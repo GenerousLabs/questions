@@ -1,16 +1,31 @@
 import * as React from "react"
 import { Typography, Button, makeStyles } from "@material-ui/core"
+import ModalComponent from "./Modal.component"
 
 interface Props {
   title: string
   intro: string
-  numberOfQuestions: number
-  setHideQuestions: (hideQuestions: boolean) => void
+  aboutHtml: string
+  questions: string[]
 }
 
 const QuestionIntro = (props: Props) => {
+  const { aboutHtml, questions } = props
+  const numberOfQuestions = questions.length
   const classes = useStyles()
-  const { numberOfQuestions, setHideQuestions } = props
+
+  const [modalOpen, setModalOpen] = React.useState(false)
+  const [modalView, setModalView] = React.useState("questions")
+
+  const showQuestions = () => {
+    setModalView("questions")
+    setModalOpen(true)
+  }
+
+  const showInfo = () => {
+    setModalView("info")
+    setModalOpen(true)
+  }
 
   const title =
     props.title.length > 0
@@ -26,15 +41,37 @@ const QuestionIntro = (props: Props) => {
       </Typography>
       <Typography className={classes.p}>{intro}</Typography>
       <Typography className={classes.p}>
-        For a{" "}
         <a
           onClick={() => {
-            setHideQuestions(false)
+            showInfo()
           }}
         >
-          sneak preview click here
+          More info about the questions
+        </a>{" "}
+        |{" "}
+        <a
+          onClick={() => {
+            showQuestions()
+          }}
+        >
+          Sneak peak at questions
         </a>
       </Typography>
+      <ModalComponent
+        title={modalView === "questions" ? "Questions" : ""}
+        open={modalOpen}
+        setOpen={setModalOpen}
+      >
+        {modalView === "questions" ? (
+          <ol id="question-list-list">
+            {questions.map((question, i) => (
+              <li key={i}>{question}</li>
+            ))}
+          </ol>
+        ) : (
+          <div dangerouslySetInnerHTML={{ __html: aboutHtml }} />
+        )}
+      </ModalComponent>
     </>
   )
 }

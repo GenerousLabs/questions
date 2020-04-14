@@ -1,41 +1,38 @@
 import * as React from "react"
-import { Modal, Button, Typography } from "@material-ui/core"
+import { Modal, Typography } from "@material-ui/core"
 import { makeStyles } from "@material-ui/core/styles"
 
-const QuestionsList = (props: {
-  questions: string[]
-  hideQuestions: boolean
-  setHideQuestions: (hideQuestions: boolean) => void
+const ModalComponent = (props: {
+  title: string
+  open: boolean
+  setOpen: (hideQuestions: boolean) => void
+  children: React.ReactNode
 }) => {
-  const { questions, hideQuestions, setHideQuestions } = props
+  const { title, open, setOpen, children } = props
   const classes = useStyles()
 
   return (
     <Modal
-      open={!hideQuestions}
+      open={open}
       onClose={() => {
-        setHideQuestions(true)
+        setOpen(false)
       }}
       aria-labelledby="question-list-title"
       aria-describedby="question-list-list"
     >
       <div className={classes.paper}>
         <Typography variant="h2" component="h2" id="question-list-title">
-          Questions
+          {title}
         </Typography>
-        <ol id="question-list-list">
-          {questions.map((question, i) => (
-            <li key={i}>{question}</li>
-          ))}
-        </ol>
+        {children}
       </div>
     </Modal>
   )
 }
 
-export default QuestionsList
+export default ModalComponent
 
-const useStyles = makeStyles(theme => {
+const useStyles = makeStyles((theme) => {
   return {
     paper: {
       position: "absolute",
