@@ -10,8 +10,7 @@ interface Props {
 }
 
 const QuestionIntro = (props: Props) => {
-  const { aboutHtml, questions } = props
-  const numberOfQuestions = questions.length
+  const { title, intro, aboutHtml, questions } = props
   const classes = useStyles()
 
   const [modalOpen, setModalOpen] = React.useState(false)
@@ -26,13 +25,6 @@ const QuestionIntro = (props: Props) => {
     setModalView("info")
     setModalOpen(true)
   }
-
-  const title =
-    props.title.length > 0
-      ? props.title
-      : `${numberOfQuestions} day question challenge`
-
-  const intro = props.intro.length > 0 ? props.intro : `An alternate`
 
   return (
     <>
