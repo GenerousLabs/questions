@@ -14,8 +14,6 @@ interface IQuestion {
         intro: string
         author: string
         questions: string[]
-      }
-      fields: {
         slug: string
       }
     }
@@ -23,12 +21,21 @@ interface IQuestion {
 }
 
 export default ({ data }: IQuestion) => {
-  const { html, frontmatter, fields } = data.markdownRemark
-  const { title, intro, author, questions } = frontmatter
-  const { slug } = fields
+  const { html, frontmatter } = data.markdownRemark
+  const { slug, title, intro, author, questions } = frontmatter
+
+  const sceneProps = {
+    title,
+    intro,
+    author,
+    slug,
+    questions,
+    aboutHtml: html,
+  }
+
   return (
     <SEO title="Question challenge">
-      <QuestionsScene slug={slug} questions={questions} />
+      <QuestionsScene {...sceneProps} />
     </SEO>
   )
 }
@@ -39,13 +46,11 @@ export const query = graphql`
       id
       html
       frontmatter {
+        slug
         title
         intro
         author
         questions
-      }
-      fields {
-        slug
       }
     }
   }
