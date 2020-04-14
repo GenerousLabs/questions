@@ -7,7 +7,6 @@ interface Props {
   intro: string
   aboutHtml: string
   questions: string[]
-  numberOfQuestions: number
 }
 
 const QuestionIntro = (props: Props) => {
