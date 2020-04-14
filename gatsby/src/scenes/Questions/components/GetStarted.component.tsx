@@ -12,7 +12,7 @@ const GetStarted = (props: Props) => {
   return (
     <div>
       <Grid container className={classes.container}>
-        <Grid item xs={4} className={classes.child}>
+        <Grid item sm={4} xs={12} className={classes.child}>
           <Typography className={classes.number}>1</Typography>
           <Typography className={classes.title}>Invite a friend</Typography>
           <Typography className={classes.p}>
@@ -20,7 +20,7 @@ const GetStarted = (props: Props) => {
             them to play.
           </Typography>
         </Grid>
-        <Grid item xs={4} className={classes.child}>
+        <Grid item sm={4} xs={12} className={classes.child}>
           <Typography className={classes.number}>2</Typography>
           <Typography className={classes.title}>Make the commitment</Typography>
           <Typography className={classes.p}>
@@ -28,7 +28,7 @@ const GetStarted = (props: Props) => {
             to it.
           </Typography>
         </Grid>
-        <Grid item xs={4} className={classes.child}>
+        <Grid item sm={4} xs={12} className={classes.child}>
           <Typography className={classes.number}>3</Typography>
           <Typography className={classes.title}>
             Get started together
