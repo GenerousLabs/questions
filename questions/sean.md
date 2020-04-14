@@ -82,16 +82,3 @@ Life's too short to be comfortable. Try to be a little more vulnerable than you 
 
 Suggestion #4
 Be gentle and listen deeply. You are being given a gift of vulnerability, and that is something worth honouring.
-
-# Extra
-
-Get started
-
-1. Invite a friend
-   Find someone you'd like to know better, send them this page, invite them to play.
-
-2. Make the commitment
-   Agree on the time and energy commitment you're happy with and commit to it.
-
-3. Get started together
-   Make sure your question sets are synchronised by clicking 'add a person' at the same time.
