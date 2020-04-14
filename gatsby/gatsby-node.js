@@ -10,6 +10,14 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       name: `slug`,
       value: slug,
     })
+
+    // Copy `collection` value from parent to markdown
+    const parent = getNode(node.parent)
+    createNodeField({
+      node,
+      name: "collection",
+      value: parent.sourceInstanceName,
+    })
   }
 }
 
@@ -17,21 +25,28 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
   return graphql(`
     {
-      allQuestionsYaml {
+      allMarkdownRemark(
+        filter: { fields: { collection: { eq: "questions" } } }
+      ) {
         nodes {
-          slug
+          id
+          fields {
+            slug
+          }
         }
       }
     }
-  `).then(result => {
+  `).then((result) => {
     const questionTemplate = path.resolve(`./src/templates/question.tsx`)
 
-    result.data.allQuestionsYaml.nodes.forEach(node => {
-      const { slug } = node
+    result.data.allMarkdownRemark.nodes.forEach((node) => {
+      const { id, fields } = node
+      const { slug } = fields
       createPage({
-        path: `/${slug}/`,
+        path: slug,
         component: questionTemplate,
         context: {
+          id,
           slug,
         },
       })

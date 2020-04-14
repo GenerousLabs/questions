@@ -6,15 +6,26 @@ import QuestionsScene from "../scenes/Questions/Questions.scene"
 
 interface IQuestion {
   data: {
-    questionsYaml: {
-      slug: string
-      questions: string[]
+    markdownRemark: {
+      id: string
+      html: string
+      frontmatter: {
+        title: string
+        intro: string
+        author: string
+        questions: string[]
+      }
+      fields: {
+        slug: string
+      }
     }
   }
 }
 
 export default ({ data }: IQuestion) => {
-  const { slug, questions } = data.questionsYaml
+  const { html, frontmatter, fields } = data.markdownRemark
+  const { title, intro, author, questions } = frontmatter
+  const { slug } = fields
   return (
     <SEO title="Question challenge">
       <QuestionsScene slug={slug} questions={questions} />
@@ -23,10 +34,19 @@ export default ({ data }: IQuestion) => {
 }
 
 export const query = graphql`
-  query QuestionTemplateQuery($slug: String!) {
-    questionsYaml(slug: { eq: $slug }) {
-      slug
-      questions
+  query QuestionTemplateQuery($id: String!) {
+    markdownRemark(id: { eq: $id }) {
+      id
+      html
+      frontmatter {
+        title
+        intro
+        author
+        questions
+      }
+      fields {
+        slug
+      }
     }
   }
 `
