@@ -25,7 +25,8 @@ const Index = (props: Props) => {
   return (
     <div className={classes.container}>
       <SEO title="Question Challenge" />
-      <Typography variant="h1">Work in progress</Typography>
+      <Typography variant="h1">Question Challenge</Typography>
+      <Typography>This is a work in progress.</Typography>
       <Typography>Try some of these questions to get started</Typography>
       {pages.map(({ id, frontmatter: { title, slug } }) => (
         <Typography key={id}>
