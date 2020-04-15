@@ -89,7 +89,7 @@ const QuestionsScene = (props: IQuestion) => {
         variant="outlined"
         size="small"
         onClick={() => {
-          const name = prompt("Enter name")
+          const name = prompt("Enter the name of your questions partner here:")
           if (name.length === 0) {
             return
           }
