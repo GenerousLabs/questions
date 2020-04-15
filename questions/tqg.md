@@ -1,7 +1,7 @@
 ---
 slug: tqg
 title: The Question Game
-intro: The Question Game is a set of questions presented one by one for 28 days. It is designed to move you and a partner beyond small talk to a place where you really get to know each other. If you give it time, commitment, and courage, it will give you more genuine connection.
+intro: The Question Game is an experiment in going deeper. It takes a set of 28 questions, designed to move you your question partner well beyond small talk, and presents them to you over 28 days. If you give it time, commitment, and courage, it will give you a more genuine connection.
 author: Sean WC
 questions:
   - Pick a person who knows you well. How might they describe you?
