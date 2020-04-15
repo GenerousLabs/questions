@@ -16,7 +16,7 @@ const GetStarted = (props: Props) => {
           <Typography className={classes.number}>1</Typography>
           <Typography className={classes.title}>Start together</Typography>
           <Typography className={classes.p}>
-            Pick someone you want to know better. Send them this link. Click the Add a Person button together on the same day.
+            Pick someone you want to know better. Send them this link. Click 'Add a Person' together on the same day.
           </Typography>
         </Grid>
         <Grid item sm={4} xs={12} className={classes.child}>
