@@ -30,7 +30,7 @@ const GetStarted = (props: Props) => {
           <Typography className={classes.number}>3</Typography>
           <Typography className={classes.title}>Rinse and repeat</Typography>
           <Typography className={classes.p}>
-            Each day the next question will appear here. Come back so you can share your next answer with your partner each day.
+            New questions will appear here each day. Come back to see what it is and share your next answer with your partner.
           </Typography>
         </Grid>
       </Grid>
