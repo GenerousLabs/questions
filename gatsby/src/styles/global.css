@@ -1,19 +1,39 @@
+@font-face {
+  font-family: "Roboto";
+  font-weight: normal;
+  src: url("../fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: bold;
+  src: url("../fonts/Roboto-Bold.ttf");
+}
+
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto";
+}
+
+a {
+  text-decoration: underline;
 }
 
 .anchor {
-    background-image: none;
+  background-image: none;
 }
 
 .gatsby-resp-image-link {
-    background-image: none;
+  background-image: none;
 }
 
-.language-javascript>span {
-    font-size: 18px;
+.language-javascript > span {
+  font-size: 18px;
 }
 
-:not(pre)>code[class*="language-"] {
-    font-size: 18px;
+:not(pre) > code[class*="language-"] {
+  font-size: 18px;
 }
