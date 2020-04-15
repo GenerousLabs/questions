@@ -52,12 +52,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/styles/typography`,
-      },
-    },
-    {
       resolve: "gatsby-plugin-manifest",
       options: {
         name: "generous-questions",
