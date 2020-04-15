@@ -89,10 +89,14 @@ const QuestionsScene = (props: IQuestion) => {
         variant="outlined"
         size="small"
         onClick={() => {
+          const name = prompt("Enter name")
+          if (name.length === 0) {
+            return
+          }
           dispatch({
             type: "CREATE_INSTANCE",
             payload: {
-              name: prompt("Enter name"),
+              name,
               startDate: LocalDate.now().toString(),
             },
           })
