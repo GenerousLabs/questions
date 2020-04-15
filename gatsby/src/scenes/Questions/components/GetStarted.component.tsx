@@ -14,28 +14,26 @@ const GetStarted = (props: Props) => {
       <Grid container className={classes.container}>
         <Grid item sm={4} xs={12} className={classes.child}>
           <Typography className={classes.number}>1</Typography>
-          <Typography className={classes.title}>Invite a friend</Typography>
+          <Typography className={classes.title}>Start together</Typography>
           <Typography className={classes.p}>
-            Find someone you'd like to know better, send them this page, invite
-            them to play.
+            Invite a friend. Send them this link. Agree to start on the same
+            day. Click the Add a Person button together on the same day.
           </Typography>
         </Grid>
         <Grid item sm={4} xs={12} className={classes.child}>
           <Typography className={classes.number}>2</Typography>
-          <Typography className={classes.title}>Make the commitment</Typography>
+          <Typography className={classes.title}>Send your answer</Typography>
           <Typography className={classes.p}>
-            Agree on the time and energy commitment you're happy with and commit
-            to it.
+            Each day, send your answer to your question partner. Call them, text
+            them, or send a carrier pigeon.
           </Typography>
         </Grid>
         <Grid item sm={4} xs={12} className={classes.child}>
           <Typography className={classes.number}>3</Typography>
-          <Typography className={classes.title}>
-            Get started together
-          </Typography>
+          <Typography className={classes.title}>Rinse and repeat</Typography>
           <Typography className={classes.p}>
-            Make sure your question sets are synchronised by clicking 'add a
-            person' at the same time.
+            Each day the new question will appear here. Come back each day and
+            send your answer to your partner each day.
           </Typography>
         </Grid>
       </Grid>
