@@ -9,6 +9,39 @@ interface Props {
   questions: string[]
 }
 
+const QuestionList = ({ questions }: { questions: string[] }) => {
+  const classes = useStyles()
+
+  const [showCount, setShowCount] = React.useState(4)
+  const showQuestions = questions.slice(0, showCount)
+
+  return (
+    <>
+      <ol id="question-list-list">
+        {showQuestions.map((question, i) => (
+          <Typography component="li" key={i} className={classes.li}>
+            {question}
+          </Typography>
+        ))}
+      </ol>
+      {showCount <= questions.length ? (
+        <p className={classes.showMoreP}>
+          <Button
+            className={classes.showMore}
+            variant="outlined"
+            size="small"
+            onClick={() => {
+              setShowCount(showCount + 4)
+            }}
+          >
+            Show more
+          </Button>
+        </p>
+      ) : null}
+    </>
+  )
+}
+
 const QuestionIntro = (props: Props) => {
   const { title, intro, aboutHtml, questions } = props
   const classes = useStyles()
@@ -55,11 +88,7 @@ const QuestionIntro = (props: Props) => {
         setOpen={setModalOpen}
       >
         {modalView === "questions" ? (
-          <ol id="question-list-list">
-            {questions.map((question, i) => (
-              <li key={i}>{question}</li>
-            ))}
-          </ol>
+          <QuestionList questions={questions} />
         ) : (
           <div dangerouslySetInnerHTML={{ __html: aboutHtml }} />
         )}
@@ -90,6 +119,16 @@ const useStyles = makeStyles((theme) => {
       fontWeight: "bold",
       textAlign: "center",
       marginTop: 12,
+    },
+    li: {
+      fontSize: 16,
+    },
+    showMoreP: {
+      textAlign: "center",
+      marginTop: 20,
+    },
+    showMore: {
+      fontSize: 16,
     },
   }
 })
