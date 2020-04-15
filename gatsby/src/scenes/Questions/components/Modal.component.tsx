@@ -31,7 +31,9 @@ const ModalComponent = (props: {
             {title}
           </Typography>
         ) : null}
-        <div id="modal-body">{children}</div>
+        <Typography id="modal-body" component="div">
+          {children}
+        </Typography>
       </div>
     </Modal>
   )
