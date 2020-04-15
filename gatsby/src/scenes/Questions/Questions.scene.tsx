@@ -83,7 +83,7 @@ const QuestionsScene = (props: IQuestion) => {
       <Typography className={classes.p}>
         {hasAtLeastOneInstance
           ? "Would you like to start these questions with someone else?"
-          : "Who would you like to start the 28 day question challenge with?"}
+          : `Who would you like to start the ${title} with?`}
       </Typography>
       <Button
         variant="outlined"
