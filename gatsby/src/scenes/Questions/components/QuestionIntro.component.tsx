@@ -71,7 +71,7 @@ const QuestionIntro = (props: Props) => {
             showInfo()
           }}
         >
-          More info about the questions
+          Tell me more
         </a>{" "}
         |{" "}
         <a
