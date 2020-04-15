@@ -16,24 +16,21 @@ const GetStarted = (props: Props) => {
           <Typography className={classes.number}>1</Typography>
           <Typography className={classes.title}>Start together</Typography>
           <Typography className={classes.p}>
-            Invite a friend. Send them this link. Agree to start on the same
-            day. Click the Add a Person button together on the same day.
+            Invite a friend. Send them this link. Click the Add a Person button together on the same day.
           </Typography>
         </Grid>
         <Grid item sm={4} xs={12} className={classes.child}>
           <Typography className={classes.number}>2</Typography>
-          <Typography className={classes.title}>Send your answer</Typography>
+          <Typography className={classes.title}>Share your answer</Typography>
           <Typography className={classes.p}>
-            Each day, send your answer to your question partner. Call them, text
-            them, or send a carrier pigeon.
+            Each day, share your answer with your question partner. Discuss over the phone, by text, or by carrier pigeon
           </Typography>
         </Grid>
         <Grid item sm={4} xs={12} className={classes.child}>
           <Typography className={classes.number}>3</Typography>
           <Typography className={classes.title}>Rinse and repeat</Typography>
           <Typography className={classes.p}>
-            Each day the new question will appear here. Come back each day and
-            send your answer to your partner each day.
+            Each day the next question will appear here. Come back so you can share your next answer with your partner each day.
           </Typography>
         </Grid>
       </Grid>
