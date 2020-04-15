@@ -17,14 +17,21 @@ const ModalComponent = (props: {
       onClose={() => {
         setOpen(false)
       }}
-      aria-labelledby="question-list-title"
-      aria-describedby="question-list-list"
+      aria-labelledby="modal-title"
+      aria-describedby="modal-body"
     >
       <div className={classes.paper}>
-        <Typography variant="h2" component="h2" id="question-list-title">
-          {title}
-        </Typography>
-        {children}
+        {title.length > 0 ? (
+          <Typography
+            variant="h2"
+            component="h2"
+            id="modal-title"
+            className={classes.title}
+          >
+            {title}
+          </Typography>
+        ) : null}
+        <div id="modal-body">{children}</div>
       </div>
     </Modal>
   )
@@ -46,8 +53,14 @@ const useStyles = makeStyles((theme) => {
       backgroundColor: theme.palette.background.paper,
       border: "2px solid #000",
       boxShadow: theme.shadows[5],
-      padding: theme.spacing(2, 4, 3),
+      padding: "20px 16px",
       overflowY: "scroll",
+    },
+    title: {
+      fontSize: 21,
+      fontWeight: "bold",
+      textAlign: "center",
+      marginBottom: 32,
     },
   }
 })
