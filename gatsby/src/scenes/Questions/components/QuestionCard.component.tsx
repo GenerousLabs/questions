@@ -63,6 +63,7 @@ const QuestionCard = (props: Props) => {
         <Typography variant="h2" component="h2" className={classes.question}>
           {questions[dayIndex]}
         </Typography>
+        <Typography className={classes.cardHeader}>Consider your answer, then share it with your partner</Typography>
         <Typography className={classes.count}>
           {dayIndex + 1}/{numberOfQuestions}
         </Typography>
