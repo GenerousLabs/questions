@@ -13,7 +13,7 @@ const GetStarted = (props: Props) => {
     <div>
       <Grid container className={classes.container}>
         <Grid item xs={12} >
-          <Typography className={classes.mainTitle}>Get Started</Typography>
+          <Typography className={classes.mainTitle}>How to play</Typography>
         </Grid>
         <Grid item sm={4} xs={12} className={classes.child}>
           <Typography className={classes.number}>1</Typography>
