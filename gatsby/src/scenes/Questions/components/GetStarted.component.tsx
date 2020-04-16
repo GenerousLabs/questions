@@ -13,7 +13,7 @@ const GetStarted = (props: Props) => {
     <div>
       <Grid container className={classes.container}>
         <Grid item xs={12} >
-          <Typography className={classes.title}>Get Started</Typography>
+          <Typography className={classes.mainTitle}>Get Started</Typography>
         </Grid>
         <Grid item sm={4} xs={12} className={classes.child}>
           <Typography className={classes.number}>1</Typography>
@@ -61,6 +61,13 @@ const useStyles = makeStyles((theme) => {
       height: 20,
       margin: "0 auto",
       fontSize: 14,
+    },
+    mainTitle: {
+      fontSize: 16,
+      fontWeight: "bold",
+      marginTop: 12,
+      paddingTop: 12,
+      textAlign: "center"
     },
     title: {
       fontSize: 16,
