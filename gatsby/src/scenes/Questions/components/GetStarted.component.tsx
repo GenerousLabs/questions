@@ -66,6 +66,7 @@ const useStyles = makeStyles((theme) => {
       fontSize: 16,
       fontWeight: "bold",
       marginTop: 12,
+      marginBottom: -12,
       paddingTop: 12,
       textAlign: "center"
     },
