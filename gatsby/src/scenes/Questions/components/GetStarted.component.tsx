@@ -12,6 +12,9 @@ const GetStarted = (props: Props) => {
   return (
     <div>
       <Grid container className={classes.container}>
+        <Grid item xs={12} >
+          <Typography className={classes.title}>Get Started</Typography>
+        </Grid>
         <Grid item sm={4} xs={12} className={classes.child}>
           <Typography className={classes.number}>1</Typography>
           <Typography className={classes.title}>Start together</Typography>
