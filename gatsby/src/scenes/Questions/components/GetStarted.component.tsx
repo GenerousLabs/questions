@@ -14,7 +14,7 @@ const GetStarted = (props: Props) => {
       <Grid container className={classes.container}>
         <Grid item xs={12}>
           <Typography className={classes.mainTitle}>
-            Quick start instructions
+            Quick start guide
           </Typography>
         </Grid>
         <Grid item sm={4} xs={12} className={classes.child}>
