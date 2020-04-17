@@ -63,7 +63,14 @@ const QuestionCard = (props: Props) => {
         <Typography variant="h2" component="h2" className={classes.question}>
           {questions[dayIndex]}
         </Typography>
-        <Typography className={classes.cardHeader}>Consider your answer, then share it with your partner</Typography>
+        {dayIndex === 0 ? (
+          <Typography className={classes.cardHeader}>
+            Share your answer with your partner
+          </Typography>
+        ) : (
+          ""
+        )}
+
         <Typography className={classes.count}>
           {dayIndex + 1}/{numberOfQuestions}
         </Typography>
@@ -71,25 +78,27 @@ const QuestionCard = (props: Props) => {
       <div className={classes.footer}>
         <div className={classes.footerLeft}>
           {dayIndex > 0 ? (
-            <Typography
-              className={classes.back}
-              onClick={() => {
-                moveStartDate(1)
-              }}
-            >
-              &lt; Back
+            <Typography className={classes.back}>
+              <a
+                onClick={() => {
+                  moveStartDate(1)
+                }}
+              >
+                &lt; Back
+              </a>
             </Typography>
           ) : null}
         </div>
         <div className={classes.footerRight}>
           {dayIndex < numberOfQuestions - 1 ? (
-            <Typography
-              className={classes.skip}
-              onClick={() => {
-                moveStartDate(-1)
-              }}
-            >
-              Skip today's question
+            <Typography className={classes.skip}>
+              <a
+                onClick={() => {
+                  moveStartDate(-1)
+                }}
+              >
+                Skip today's question
+              </a>
             </Typography>
           ) : null}
         </div>
