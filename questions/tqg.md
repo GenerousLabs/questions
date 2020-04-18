@@ -1,7 +1,7 @@
 ---
 slug: tqg
 title: The Question Game
-intro: The Question Game is an experiment in going a little deeper. It takes a set of 28 questions, designed to move you your question partner beyond small talk, and presents them to you over 28 days. If you give it time, commitment, and courage, it will give you a more genuine connection.
+intro: The Question Game is an experiment in going a little deeper. It takes a set of 28 questions, designed to move you and your question partner beyond small talk, and presents them to you over 28 days. If you give it time, commitment, and courage, it will give you a more genuine connection.
 author: Sean WC
 questions:
   - Pick a person who knows you well. How might they describe you?
@@ -50,16 +50,15 @@ A little more concretely, it's kind of like a tool where you can put in your own
 
 # Who?
 
-
 ---
 
 # How it works
 
-Find a friend, partner, lover, family member, co-worker, flatmate, or anyone you just want to be closer with.  See if they would like to invest a little time and energy in getting to know you better. If it's a yes then follow the steps set out on the home page to get started.
+Find a friend, partner, lover, family member, co-worker, flatmate, or anyone you just want to be closer with. See if they would like to invest a little time and energy in getting to know you better. If it's a yes then follow the steps set out on the home page to get started.
 
 There is no 'right way' to play The Question Game. You might decide to share your answers via text (perhaps in a messenger/WhatsApp/Telegram group so you can keep them separate from your regular chat), or on a phone or video call so you can hear and see one another while sharing. It's up to you and your Question Game partner.
 
-The most important thing is that you are both committed to following through. We recommend that you agree up front how much time you want to commit to this each day (5 mins, 10 mins, 20 mins, 2 hours?) and then stick to that as best you can. It may also be helpful if you can agree a time you will keep free so you can both be present with one another's answers. 
+The most important thing is that you are both committed to following through. We recommend that you agree up front how much time you want to commit to this each day (5 mins, 10 mins, 20 mins, 2 hours?) and then stick to that as best you can. It may also be helpful if you can agree a time you will keep free so you can both be present with one another's answers.
 
 # The Rules
 
@@ -81,7 +80,8 @@ Be gentle and listen deeply. You are being given a gift of vulnerability, and th
 ## Important points to note
 
 This app is a little bit different. It doesn't rely on centralised servers to process your data. This means that we can't see what you're doing or saying, but it also means that we can't sync your question sets between you and your partner. So please note:
- - Only the device you start on will know where you're up to. This means that you'll need to start a new 'instance' (by clicking 'add a person' again) and skip up to your current point on any new device.
- - Your partner and you need to add each other on your version of the app on the same day in order to have the same question appear at the same time.
- 
+
+- Only the device you start on will know where you're up to. This means that you'll need to start a new 'instance' (by clicking 'add a person' again) and skip up to your current point on any new device.
+- Your partner and you need to add each other on your version of the app on the same day in order to have the same question appear at the same time.
+
 We've built this thing so that people can set it up with their own questions and put it out into the world. If you would like to run your own version of 'The Question Game' (or whatever you might like to call it!) then feel free to get in touch with us at...
