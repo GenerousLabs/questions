@@ -5,10 +5,10 @@ intro: The Question Game is an experiment in going a little deeper. It takes a s
 author: Sean WC
 questions:
   - Pick a person who knows you well. How might they describe you?
-  - Consider the person you chose in the last question. What is something on which you connect with them?
+  - Consider the person you chose in the last question. What is something you admire about them?
   - Describe in your own words who you think your question partner is.
-  - What is something about yourself that you would like your question partner to know? What is something about yourself that you are nervous about them knowing?
-  - What is it that made you want to play the question game with your partner?
+  - What is something about yourself that you would like your question partner to know?
+  - What is it that made you want to play the question game with your question partner?
   - What is your favorite thing about where you live?
   - What was your favourite moment in the last few days?
   - What was the saddest moment of your life?
