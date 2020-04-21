@@ -34,21 +34,33 @@ questions:
   - Who else might you like to answer these questions with? Why?
 ---
 
-# Why?
+# Why this, why now?
 
-As the clocks ticked past midnight on the first of January this year, few of us could have forseen that our collective reality would be so rapidly and unceremoniously upended. The steady rhythm of daily life has been replaced by something chaotic and uncertain. Kids are out of school, adults are out of work, and all of us are now confronted with the fragility of the world on which we depend.
+As the clocks ticked past midnight on the first of January this year, few of us could have forseen that our collective reality was about to be turned upside down. The steady rhythm of daily life has been replaced by something chaotic and uncertain. Kids are out of school, adults are out of work, and all of us are now confronted with the fragility of the world upon which we have depended.
 
-Though none of us seem able to say exactly how, it seems clear that something important has changed. Our complex systems of governance, economics, defense have been shown to be vulnerable. The cracks in the dike are showing, and they may one day cause it to fail.
+It seems that something important has changed. Our leaders are scrambling and we're faced with significant uncertainty. Vulnerabilities are showing in the complex systems on which our societies depend. The cracks in the dike are showing, and they may one day cause it to fail.
 
-So the question, then, if we do not have the safety that centuries of long work has sought to bring us, is 'what do we have?'. The answer, as ever, is 'each other'. And so it seems there may be few better ways to spend some of the productive energy liberated by this pandemic than by building better connection with one another.
+So the question, then, if we do not have the safety that centuries of long work has sought to bring us, is 'what do we have?'. The answer, as ever, is 'each other'. And so it seems there may be few better ways to spend some of the productive energy liberated by this pandemic than by building better connections with one another.
 
-# What?
+# What is The Question Game?
 
-A Question of Connection is an experiment in using decentralised tech to build real-world connection between people. That's a little jargon-ey, but basically what it means is that we've built a tool that you can take and do whatever with - change it, extend it, break it. We don't want to determine how you use this thing. We've made it for you, and we just hope that you like it and get some value from using it.
+The Question Game is an experiment in using decentralised tech to build real-world connection between people. That's a little jargon-ey, so let's break it down:
 
-A little more concretely, it's kind of like a tool where you can put in your own details and generate your own app, which you can then share with your friends. In the case of A Question of Connection, you can then use that app to guide you through a set of questions designed to foster closeness, shared understanding, and connection between participants. And of course you can also tweak or change the questions however you like!
+### It's an experiment
 
-# Who?
+We're a small team just starting on the journey of building tech that works for people. We don't have all of the answers, and we're going to make mistakes, but we believe we have a mission worth undertaking.
+
+### It's decentralised
+
+We've built this thing so that we have as little control as possible - we can't see what you're doing or how, we don't capture your answers, we don't even know who you are. We don't want to determine how you use this thing. We've made it for you, and we just hope that you like it and get some value from using it.
+
+### It's about real-world connection
+
+So much of what our online lives do is draw us away from the physical, from the here and now, from the world we can see, smell, touch feel, taste, and hear. We are interested in doing things differently. We are building technology which supports you to live your best, most present, most supported and connected life, both online and off.
+
+# Who are we?
+
+Generous Labs is a small team of developers, designers, and other assorted techies who are trading in promising and lucrative careers in 'the real world' to do something a little more meaningful with our working hours. We are building tools which put power back in the hands of the people who use them: power to live their best, most free, most connected, and expressive lives. Read more about our mission at [Generous Labs Home](https://www.youtube.com/watch?v=dQw4w9WgXcQ).
 
 ---
 
