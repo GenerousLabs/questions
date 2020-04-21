@@ -52,15 +52,15 @@ We're a small team just starting on the journey of building tech that works for 
 
 ### It's decentralised
 
-We've built this thing so that we have as little control as possible - we can't see what you're doing or how, we don't capture your answers, we don't even know who you are. We don't want to determine how you use this thing. We've made it for you, and we just hope that you like it and get some value from using it.
+We've built this thing to give us as little control as possible - we can't see what you're doing or how, we don't capture your answers, we don't even know who you are. We don't want to determine how you use this thing. We've made it for you, and we just hope that you like it, get some value from using it, and will share it with the world.
 
 ### It's about real-world connection
 
-So much of what our online lives do is draw us away from the physical, from the here and now, from the world we can see, smell, touch feel, taste, and hear. We are interested in doing things differently. We are building technology which supports you to live your best, most present, most supported and connected life, both online and off.
+So much of what our online lives do is draw us away from the physical, from the here and now, from the world we can see, smell, touch feel, taste, and hear. We are interested in doing things differently. We build tech which supports you to live your best, most present, most supported and connected life, both online and off.
 
 # Who are we?
 
-Generous Labs is a small team of developers, designers, and other assorted techies who are trading in promising and lucrative careers in 'the real world' to do something a little more meaningful with our working hours. We are building tools which put power back in the hands of the people who use them: power to live their best, most free, most connected, and expressive lives. Read more about our mission at [Generous Labs Home](https://www.youtube.com/watch?v=dQw4w9WgXcQ).
+Generous Labs is a small team of developers, designers, and other assorted techies who've traded in promising and lucrative careers in 'the real world' to do something a little more meaningful with our working hours. We're building tools which put power back in the hands of you, the people who use them: power to live your best, most free, most connected, most expressive lives. Read more about our mission at [Generous Labs Home](https://www.youtube.com/watch?v=dQw4w9WgXcQ).
 
 ---
 
@@ -74,19 +74,24 @@ The most important thing is that you are both committed to following through. We
 
 # The Rules
 
-Rule #1:
+#### Rule #1:
+
 There are no rules, only suggestions.
 
-Suggestion #1:
+#### Suggestion #1:
+
 There are no wrong answers. Share what feels true for you.
 
-Suggestion #2
+#### Suggestion #2
+
 If you start then see it through. Let's be intentional about this.
 
-Suggestion #3
+#### Suggestion #3
+
 Life's too short to be comfortable. Try to be a little more vulnerable than you ordinarily would.
 
-Suggestion #4
+#### Suggestion #4
+
 Be gentle and listen deeply. You are being given a gift of vulnerability, and that is something worth honouring.
 
 ## Important points to note
