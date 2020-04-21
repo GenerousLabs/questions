@@ -64,7 +64,7 @@ const QuestionCard = (props: Props) => {
           {questions[dayIndex]}
         </Typography>
         {dayIndex === 0 ? (
-          <Typography className={classes.cardHeader}>
+          <Typography className={classes.cardSubHeader}>
             Share your answer with your partner
           </Typography>
         ) : (
@@ -147,6 +147,11 @@ const useStyles = makeStyles((theme) => {
     cardHeader: {
       textAlign: "center",
       fontSize: 16,
+    },
+    cardSubHeader: {
+      textAlign: "center",
+      fontSize: 16,
+      paddingBottom: 12,
     },
     question: {
       textAlign: "center",
