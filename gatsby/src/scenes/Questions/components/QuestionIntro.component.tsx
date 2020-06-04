@@ -24,7 +24,7 @@ const QuestionList = ({ questions }: { questions: string[] }) => {
           </Typography>
         ))}
       </ol>
-      {showCount <= questions.length ? (
+      {showCount < questions.length ? (
         <p className={classes.showMoreP}>
           <Button
             className={classes.showMore}
